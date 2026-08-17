@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasileiros no exterior — Davi Amadeu | Consultoria em Investimentos Imobiliários</title>
+<meta name="description" content="Consultoria para brasileiros no exterior que querem construir patrimônio imobiliário em São José do Rio Preto, com acompanhamento remoto do início à entrega.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230F0D0B'/%3E%3Cpath d='M20 20L20 80L58 50Z' stroke='%23C9A64A' stroke-width='6' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M55 46V82 M78 46V82 M55 46L67 32L78 46' stroke='%23C9A64A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F0D0B;
+    --graphite:#1B1713;
+    --graphite-2:#252019;
+    --line:rgba(201,166,74,0.18);
+    --line-strong:rgba(201,166,74,0.35);
+    --gold:#C9A64A;
+    --gold-bright:#E7C878;
+    --wine:#3A211B;
+    --paper:#F4EFE4;
+    --paper-dim:#CFC8B8;
+    --muted:#948C7E;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(15,13,11,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1120px;margin:0 auto;gap:20px;}
+  .brand{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .brand svg{width:34px;height:34px;flex-shrink:0;}
+  .brand-name{font-family:'Fraunces',serif;font-size:15px;letter-spacing:0.14em;color:var(--gold-bright);}
+  .brand-name b{color:var(--gold-bright);font-weight:500;}
+  .back-home{
+    display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    color:var(--paper-dim);letter-spacing:0.03em;margin-right:auto;
+  }
+  .back-home:hover{color:var(--gold-bright);}
+  .back-home svg{width:14px;height:14px;flex-shrink:0;}
+  @media(max-width:640px){.back-home span{display:none;}}
+  .nav-cta{
+    font-size:13px;padding:10px 20px;border:1px solid var(--gold);
+    color:var(--gold-bright);letter-spacing:0.03em;border-radius:2px;
+    transition:all .2s ease;white-space:nowrap;flex-shrink:0;
+  }
+  .nav-cta:hover{background:var(--gold);color:var(--ink);}
+
+  .hero{
+    position:relative;overflow:hidden;
+    padding:80px 32px 70px;
+    background:
+      radial-gradient(ellipse 900px 500px at 85% -10%, rgba(201,166,74,0.14), transparent 60%),
+      radial-gradient(ellipse 700px 500px at -10% 110%, rgba(58,33,27,0.5), transparent 60%);
+  }
+  .hero-inner{max-width:1120px;margin:0 auto;position:relative;z-index:2;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.22em;
+    color:var(--gold);text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:12px;
+  }
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);display:inline-block;}
+  .hero h1{font-size:clamp(30px,4.4vw,48px);line-height:1.16;color:var(--paper);max-width:20ch;}
+  .hero h1 em{font-style:normal;color:var(--gold-bright);}
+  .hero p.lead{max-width:600px;margin:22px 0 34px;color:var(--paper-dim);font-size:17px;line-height:1.7;}
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:16px 30px;font-size:14.5px;
+    letter-spacing:0.03em;border-radius:2px;transition:all .2s ease;font-weight:500;
+    background:none;border:none;font-family:inherit;cursor:pointer;
+  }
+  .btn-primary{background:var(--gold);color:var(--ink);}
+  .btn-primary:hover{background:var(--gold-bright);}
+  .btn-ghost{border:1px solid var(--line-strong);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright);}
+
+  /* ---- calculadora de poder de compra ---- */
+  .calc{
+    margin-top:52px;background:var(--graphite-2);border:1px solid var(--line);border-radius:2px;
+    padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;
+  }
+  @media(max-width:760px){.calc{grid-template-columns:1fr;}}
+  .toggle{display:inline-flex;border:1px solid var(--line-strong);border-radius:20px;padding:3px;margin-top:12px;}
+  .toggle button{
+    border:none;background:transparent;font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:500;
+    padding:8px 18px;border-radius:16px;cursor:pointer;color:var(--paper-dim);transition:all .2s ease;
+  }
+  .toggle button.active{background:var(--gold);color:var(--ink);}
+  .calc-rate{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);}
+  .calc-result .lbl{font-size:12.5px;color:var(--muted);margin-bottom:8px;letter-spacing:0.03em;}
+  .calc-result .num{font-family:'Fraunces',serif;font-size:2.4rem;color:var(--gold-bright);}
+  .calc-result .num small{font-family:'Inter',sans-serif;font-size:14px;color:var(--paper-dim);font-weight:400;}
+  .calc-foot{
+    grid-column:1/-1;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:18px;line-height:1.6;
+  }
+
+  section{padding:80px 0;}
+  .section-head{max-width:640px;margin:0 0 48px;}
+  .section-tag{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.2em;
+    color:var(--gold);text-transform:uppercase;margin-bottom:16px;
+  }
+  .section-head h2{font-size:clamp(26px,3.2vw,36px);color:var(--paper);line-height:1.15;}
+  .section-head p{color:var(--paper-dim);margin-top:14px;font-size:16px;max-width:560px;}
+
+  .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(max-width:760px){.stats-grid{grid-template-columns:1fr;}}
+  .statc{background:var(--ink);padding:34px 28px;}
+  .statc .n{font-family:'Fraunces',serif;font-size:2.1rem;color:var(--gold-bright);}
+  .statc .d{color:var(--paper-dim);font-size:14.5px;line-height:1.6;margin-top:12px;}
+  .statc .s{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:16px;text-transform:uppercase;letter-spacing:0.05em;}
+
+  .video-block{background:var(--graphite);}
+  .video-placeholder{
+    aspect-ratio:16/9;background:var(--graphite-2);border:1px dashed var(--line-strong);border-radius:2px;
+    display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;color:var(--muted);text-align:center;padding:20px;line-height:1.7;
+  }
+
+  .steps{display:flex;flex-direction:column;}
+  .step{display:grid;grid-template-columns:64px 1fr;gap:24px;padding:28px 0;border-top:1px solid var(--line);}
+  .step:last-child{border-bottom:1px solid var(--line);}
+  .step .n{font-family:'IBM Plex Mono',monospace;color:var(--gold);font-size:13px;}
+  .step h3{font-size:18px;color:var(--paper);margin-bottom:8px;}
+  .step p{font-size:14.5px;color:var(--paper-dim);max-width:60ch;line-height:1.65;margin:0;}
+
+  .contact{background:var(--graphite);position:relative;}
+  .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:70px;align-items:start;}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-copy h2{font-size:clamp(28px,4vw,40px);color:var(--paper);line-height:1.15;}
+  .contact-copy p{color:var(--paper-dim);margin-top:20px;max-width:460px;font-size:16px;line-height:1.75;}
+  .whatsapp-inline{
+    margin-top:34px;display:inline-flex;align-items:center;gap:12px;
+    padding:15px 24px;border:1px solid var(--line-strong);border-radius:2px;color:var(--paper);
+  }
+  .whatsapp-inline:hover{border-color:var(--gold);color:var(--gold-bright);}
+  form{background:var(--graphite-2);border:1px solid var(--line);border-radius:2px;padding:36px;}
+  .field{margin-bottom:20px;}
+  .field label{display:block;font-size:12px;letter-spacing:0.05em;color:var(--muted);margin-bottom:8px;text-transform:uppercase;font-family:'IBM Plex Mono',monospace;}
+  .field input,.field select{
+    width:100%;background:transparent;border:none;border-bottom:1px solid var(--line-strong);
+    color:var(--paper);font-size:15px;padding:10px 0;font-family:'Inter',sans-serif;
+  }
+  .field select{appearance:none;}
+  .field select option{background:var(--graphite);}
+  .field input::placeholder{color:var(--muted);}
+  .field input:focus,.field select:focus{outline:none;border-bottom-color:var(--gold);}
+  form button{
+    width:100%;margin-top:8px;padding:16px;background:var(--gold);color:var(--ink);
+    border:none;font-size:14px;letter-spacing:0.03em;font-weight:500;border-radius:2px;cursor:pointer;
+    transition:background .2s ease;font-family:'Inter',sans-serif;
+  }
+  form button:hover{background:var(--gold-bright);}
+  .form-note{font-size:11.5px;color:var(--muted);margin-top:14px;text-align:center;}
+
+  footer{padding:44px 32px;border-top:1px solid var(--line);}
+  .footer-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+  .footer-inner .fbrand{display:flex;align-items:center;gap:10px;}
+  .footer-inner .fbrand svg{width:24px;height:24px;}
+  .footer-inner .fbrand span{font-size:13px;color:var(--muted);letter-spacing:0.05em;}
+  .footer-links{display:flex;gap:24px;font-size:13px;color:var(--muted);}
+  .footer-links a:hover{color:var(--gold-bright);}
+
+  .wa-float{
+    position:fixed;bottom:26px;right:26px;z-index:60;
+    width:56px;height:56px;border-radius:50%;background:var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
+  }
+  .wa-float svg{width:26px;height:26px;}
+
+  @media(max-width:520px){.step{grid-template-columns:1fr;gap:8px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 12L12 88L62 50Z" stroke="#E7C878" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M55 42V88 M85 42V88 M55 42L70 24L85 42 M64 65H76" stroke="#E7C878" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="brand-name">DAVI <b>AMADEU</b></div>
+    </a>
+    <a href="index.html" class="back-home">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Página Inicial</span>
+    </a>
+    <a href="https://wa.me/5517997726975" class="nav-cta" target="_blank" rel="noopener">Falar agora</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Brasileiros no exterior</div>
+    <h1>Por que só investir onde você mora hoje, se pode investir numa das <em>cidades que mais crescem no Brasil?</em></h1>
+    <p class="lead">Você já constrói patrimônio fora do país. Pode construir patrimônio dentro dele também — com acompanhamento remoto do início à entrega, sem precisar estar presente.</p>
+    <div class="cta-row">
+      <a href="#contato" class="btn btn-primary">Quero uma consultoria</a>
+      <a href="#dados" class="btn btn-ghost">Ver os dados de Rio Preto</a>
+    </div>
+
+    <div class="calc" id="calculadora">
+      <div>
+        <div class="section-tag" style="margin-bottom:6px;">Simulador de poder de compra</div>
+        <p style="color:var(--paper-dim);font-size:14px;margin:0 0 4px;">Com 1.000 na sua moeda, veja quanto de imóvel alto padrão isso compra aqui.</p>
+        <div class="toggle">
+          <button type="button" class="active" onclick="setCurrency('EUR', this)">EUR</button>
+          <button type="button" onclick="setCurrency('USD', this)">USD</button>
+        </div>
+        <div class="calc-rate" id="rate-display">1 EUR = R$ 6,04</div>
+      </div>
+      <div class="calc-result">
+        <div class="lbl">COM 1.000 <span id="cur-label">EUR</span>, VOCÊ COMPRA EM RIO PRETO</div>
+        <div class="num" id="sqm-result">1,4 m² <small>de imóvel alto padrão</small></div>
+      </div>
+      <div class="calc-foot">Referência: R$ 10.000–15.000/m² em Rio Preto (alto padrão) · câmbio aproximado, sujeito a variação · não substitui cotação em tempo real</div>
+    </div>
+  </div>
+</section>
+
+<section id="dados">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">01 — não é achismo</div>
+      <h2>Os dados que sustentam esse investimento</h2>
+      <p>Não é só sobre gostar da cidade. É sobre números que sustentam a tese — os mesmos que uso pra avaliar qualquer investimento que recomendo.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="statc">
+        <div class="n">8ª</div>
+        <div class="d">cidade mais desenvolvida do Brasil entre 5.550 municípios avaliados — e 4ª do estado de SP</div>
+        <div class="s">IFDM / Firjan 2025</div>
+      </div>
+      <div class="statc">
+        <div class="n">100%</div>
+        <div class="d">de água tratada para toda a população — referência nacional em saneamento básico</div>
+        <div class="s">Instituto Trata Brasil</div>
+      </div>
+      <div class="statc">
+        <div class="n">-40%</div>
+        <div class="d">de custo de vida em relação à média da capital paulista, com infraestrutura de cidade grande</div>
+        <div class="s">Dados de mercado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video-block">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">02 — o imóvel</div>
+      <h2>Um exemplo real do que seu dinheiro compra aqui</h2>
+      <p>Um vídeo curto mostrando um empreendimento real, com valores e comparação de padrão — pra você ver com os próprios olhos antes de qualquer conversa.</p>
+    </div>
+    <div class="video-placeholder">[ ESPAÇO RESERVADO PARA O VÍDEO ]<br>Substituir pelo embed do YouTube/Instagram após a gravação</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">03 — como funciona à distância</div>
+      <h2>Do primeiro contato à entrega das chaves, sem você precisar estar aqui</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n mono">01</div><div><h3>Conversa inicial</h3><p>Entendemos seu orçamento, objetivo (renda, valorização, moradia futura) e prazo.</p></div></div>
+      <div class="step"><div class="n mono">02</div><div><h3>Curadoria de imóveis</h3><p>Seleção de empreendimentos por região, liquidez e potencial de valorização, com vídeo e planta enviados por WhatsApp.</p></div></div>
+      <div class="step"><div class="n mono">03</div><div><h3>Documentação e câmbio</h3><p>Orientação sobre CPF, procuração e câmbio, com apoio de profissionais especializados nesse processo.</p></div></div>
+      <div class="step"><div class="n mono">04</div><div><h3>Acompanhamento até a entrega</h3><p>Do contrato às chaves, com apoio para decisões de locação ou revenda no pós-entrega.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <div class="section-tag">Contato</div>
+        <h2>Vamos conversar sobre onde entra Rio Preto na sua estratégia?</h2>
+        <p>Uma conversa de 20 minutos já mostra se o momento é de entrar, esperar ou reorganizar o que você já tem — mesmo morando fora.</p>
+        <a href="https://wa.me/5517997726975" class="whatsapp-inline" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.5.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z" stroke="#C9A64A" stroke-width="1.6"/></svg>
+          (17) 99772-6975 · Davi Amadeu
+        </a>
+      </div>
+      <form>
+        <div class="field"><label for="nome">Nome completo</label><input type="text" id="nome" name="nome" placeholder="Seu nome completo" required></div>
+        <div class="field"><label for="whatsapp">WhatsApp (com código do país)</label><input type="tel" id="whatsapp" name="whatsapp" placeholder="+351 9XX XXX XXX" required></div>
+        <div class="field"><label for="email">E-mail</label><input type="email" id="email" name="email" placeholder="seu@email.com" required></div>
+        <div class="field"><label for="pais">País onde mora atualmente</label>
+          <select id="pais" name="pais">
+            <option>Portugal</option><option>Espanha</option><option>Estados Unidos</option><option>Outro</option>
+          </select>
+        </div>
+        <button type="submit">Quero receber uma seleção de imóveis</button>
+        <div class="form-note">Retorno em até 1 dia útil.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="fbrand">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 12L12 88L62 50Z" stroke="#C9A64A" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M55 42V88 M85 42V88 M55 42L70 24L85 42 M64 65H76" stroke="#C9A64A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Davi Amadeu · CRECI 324251 · São José do Rio Preto — SP</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Início</a>
+      <a href="index.html#empreendimentos">Empreendimentos</a>
+      <a href="ebook.html">Guia do Comprador</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5517997726975" class="wa-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.5.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z" stroke="#0F0D0B" stroke-width="1.6"/></svg>
+</a>
+
+<script>
+  const rates = { EUR: 6.04, USD: 5.16 };
+  const sqmPriceBRL = 12500;
+  function setCurrency(cur, btn) {
+    document.querySelectorAll('.toggle button').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    const rate = rates[cur];
+    document.getElementById('rate-display').textContent = '1 ' + cur + ' = R$ ' + rate.toFixed(2).replace('.', ',');
+    document.getElementById('cur-label').textContent = cur;
+    const sqm = (1000 * rate) / sqmPriceBRL;
+    document.getElementById('sqm-result').innerHTML = sqm.toFixed(1).replace('.', ',') + ' m² <small>de imóvel alto padrão</small>';
+  }
+</script>
+
+</body>
+</html>
