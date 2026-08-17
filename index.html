@@ -55,21 +55,20 @@
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1280px;margin:0 auto;gap:16px;}
-  .brand{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1120px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;}
   .brand svg{width:34px;height:34px;}
   .brand-name{font-family:'Fraunces',serif;font-size:15px;letter-spacing:0.14em;color:var(--gold-bright);}
   .brand-name b{color:var(--gold-bright);font-weight:500;}
-  nav.links{display:flex;gap:20px;font-size:13px;color:var(--paper-dim);flex-wrap:nowrap;}
-  nav.links a{white-space:nowrap;}
+  nav.links{display:flex;gap:36px;font-size:14px;color:var(--paper-dim);}
   nav.links a:hover{color:var(--gold-bright);}
   .nav-cta{
     font-size:13px;padding:10px 20px;border:1px solid var(--gold);
     color:var(--gold-bright);letter-spacing:0.03em;border-radius:2px;
-    transition:all .2s ease;white-space:nowrap;flex-shrink:0;
+    transition:all .2s ease;white-space:nowrap;
   }
   .nav-cta:hover{background:var(--gold);color:var(--ink);}
-  @media(max-width:1180px){nav.links{display:none;}}
+  @media(max-width:860px){nav.links{display:none;}}
 
   /* ---------- MOBILE MENU ---------- */
   .hamburger{
@@ -79,7 +78,7 @@
   }
   .hamburger svg{width:18px;height:18px;}
   .hamburger rect{fill:var(--gold-bright);}
-  @media(max-width:1180px){.hamburger{display:flex;}}
+  @media(max-width:860px){.hamburger{display:flex;}}
   @media(max-width:520px){.nav-cta{display:none;}}
 
   .mobile-menu{
@@ -328,7 +327,6 @@
       <a href="#atuacao">Como atuo</a>
       <a href="#empreendimentos">Empreendimentos</a>
       <a href="#perfil">Para quem</a>
-      <a href="brasileiros-no-exterior.html">Brasileiros no exterior</a>
       <a href="ebook.html">Guia do Comprador</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -350,7 +348,6 @@
     <a href="#atuacao">Como atuo</a>
     <a href="#empreendimentos">Empreendimentos</a>
     <a href="#perfil">Para quem</a>
-    <a href="brasileiros-no-exterior.html">Brasileiros no exterior</a>
     <a href="ebook.html">Guia do Comprador</a>
     <a href="#contato">Contato</a>
   </nav>
@@ -484,11 +481,11 @@
         <h4>Empresários</h4>
         <p>Reinvestem resultado do negócio em patrimônio imobiliário sólido.</p>
       </div>
-      <a href="brasileiros-no-exterior.html" class="p-card" style="display:block;">
+      <div class="p-card">
         <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#C9A64A" stroke-width="1.6"/><path d="M3 12H21M12 3C14.5 6 14.5 18 12 21M12 3C9.5 6 9.5 18 12 21" stroke="#C9A64A" stroke-width="1.6"/></svg>
         <h4>Brasileiros no exterior</h4>
         <p>Constroem patrimônio no Brasil à distância, com segurança e acompanhamento.</p>
-      </a>
+      </div>
     </div>
   </div>
 </section>
