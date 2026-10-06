@@ -78,6 +78,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 .hero{border-top:0;padding-block:clamp(56px,9vw,112px) clamp(48px,7vw,88px);position:relative;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 .hero h1{font-size:clamp(42px,6.6vw,82px);line-height:1.02;margin-block:22px 26px}
+.hero h1 em{font-style:normal}
 .hero .lead{font-size:18px}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 .audience{margin-top:40px;padding-top:20px;border-top:1px solid var(--gold-faint);font-size:13px;color:var(--dim)}
@@ -252,7 +253,7 @@ footer{border-top:1px solid var(--gold-faint);padding-block:40px;color:var(--dim
       <button type="button" id="lang-pt" aria-pressed="true">PT</button>
       <button type="button" id="lang-en" aria-pressed="false">EN</button>
     </div>
-    <a class="btn btn-gold" href="index.html#contato" data-i18n="nav.cta">Agendar conversa</a>
+    <a class="btn btn-gold" href="index.html#contato" data-i18n="nav.cta">Fale comigo</a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
   </div>
   <nav class="mnav" id="mnav" aria-label="Menu móvel">
@@ -261,7 +262,7 @@ footer{border-top:1px solid var(--gold-faint);padding-block:40px;color:var(--dim
     <a href="index.html#portfolio" data-i18n="nav.portfolio">Portfólio</a>
     <a href="index.html#internacional" data-i18n="nav.intl">Internacional</a>
     <a href="index.html#perfil" data-i18n="nav.who">Para quem</a>
-    <a href="index.html#contato" data-i18n="nav.cta">Agendar conversa</a>
+    <a href="index.html#contato" data-i18n="nav.cta">Fale comigo</a>
   </nav>
 </header>
 
@@ -282,7 +283,7 @@ footer{border-top:1px solid var(--gold-faint);padding-block:40px;color:var(--dim
       <p class="lead" data-i18n="cat.cta.p">Em 20 minutos de conversa eu indico quais destes fazem sentido para o seu objetivo.</p>
       <div class="ctas" style="margin-top:0">
         <a class="btn btn-gold" href="https://wa.me/5517997726975" target="_blank" rel="noopener" data-i18n="cta.wa">Falar no WhatsApp</a>
-        <a class="btn btn-ghost" href="https://calendar.app.google/Z4gEh5GhENEe1SGr7" target="_blank" rel="noopener" data-i18n="cta.call">Agendar uma conversa</a>
+        
       </div>
     </div>
   </section>
@@ -336,7 +337,7 @@ const T={
   "nav.portfolio":"Portfolio",
   "nav.intl":"International",
   "nav.who":"Who I serve",
-  "nav.cta":"Book a call",
+  "nav.cta":"Contact me",
   "cat.back":"← Back to home",
   "cat.eyebrow":"Full portfolio",
   "cat.h1":"All <em>projects</em>",
@@ -344,7 +345,7 @@ const T={
   "cat.cta.h":"Not sure where <em>to start?</em>",
   "cat.cta.p":"In a 20-minute conversation I'll point out which of these fit your goal.",
   "cta.wa":"Message on WhatsApp",
-  "cta.call":"Book a conversation",
+  "cta.call":"See projects",
   "ft.k":"Real Estate Advisory"
  }
 };
