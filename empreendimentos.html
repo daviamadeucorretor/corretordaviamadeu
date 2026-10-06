@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Empreendimentos | Davi Amadeu</title>
+<meta name="description" content="Empreendimentos na curadoria de Davi Amadeu, organizados por construtora. São José do Rio Preto e região.">
+<link rel="canonical" href="https://www.corretordaviamadeu.com.br/empreendimentos.html">
+<meta name="theme-color" content="#0f0d0b">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Davi Amadeu">
+<meta property="og:title" content="Empreendimentos | Davi Amadeu">
+<meta property="og:description" content="Empreendimentos na curadoria de Davi Amadeu, organizados por construtora. São José do Rio Preto e região.">
+<meta property="og:url" content="https://www.corretordaviamadeu.com.br/empreendimentos.html">
+<meta property="og:image" content="https://www.corretordaviamadeu.com.br/img/og-davi-amadeu.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+/* Layout: editorial single column, dark "noite de obra" ground, gold hairlines as architectural drawing lines. Identity kept from the current site. */
+:root{
+  --bg:#0f0d0b; --surface:#1b1713; --surface-2:#252019;
+  --gold:#c9a64a; --gold-hi:#e7c878; --gold-line:rgba(201,166,74,.28); --gold-faint:rgba(201,166,74,.10);
+  --fg:#f4efe4; --muted:#cfc8b8; --dim:#948c7e;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --wrap:1180px; --gutter:clamp(16px,4vw,40px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4.2vw,48px);line-height:1.1}
+h2 em,h1 em{font-style:italic;color:var(--gold-hi)}
+p{margin:0}
+.lead{color:var(--muted);font-size:17px;max-width:58ch}
+section{padding-block:clamp(72px,10vw,128px);border-top:1px solid var(--gold-faint)}
+.sec-head{display:grid;gap:18px;margin-bottom:clamp(40px,6vw,64px);max-width:760px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;font-size:14px;font-weight:500;border:1px solid var(--gold-line);transition:background .2s,border-color .2s,color .2s;cursor:pointer;font-family:var(--sans)}
+.btn-gold{background:var(--gold);color:#17130e;border-color:var(--gold)}
+.btn-gold:hover{background:var(--gold-hi);border-color:var(--gold-hi)}
+.btn-ghost{color:var(--fg);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-hi)}
+.btn svg{width:16px;height:16px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(15,13,11,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--gold-faint)}
+.nav{display:flex;align-items:center;gap:24px;height:68px}
+.brand{display:flex;align-items:center;flex:none}
+.brand img{height:30px;width:auto;display:block}
+@media (max-width:420px){.brand img{height:24px}}
+.links{display:flex;gap:22px;margin-left:auto;font-size:13px;color:var(--muted)}
+.links a:hover{color:var(--gold-hi)}
+.lang{display:flex;border:1px solid var(--gold-line);font-family:var(--mono);font-size:11px;letter-spacing:.1em}
+.lang button{background:none;border:0;color:var(--dim);padding:7px 10px;cursor:pointer;font:inherit}
+.lang button[aria-pressed="true"]{background:var(--gold-faint);color:var(--gold-hi)}
+.nav .btn{padding:9px 16px;font-size:13px}
+.burger{display:none;background:none;border:1px solid var(--gold-line);color:var(--fg);width:40px;height:40px;cursor:pointer}
+.mnav{display:none;flex-direction:column;gap:4px;padding:8px var(--gutter) 20px;border-top:1px solid var(--gold-faint)}
+.mnav a{padding:10px 0;color:var(--muted);border-bottom:1px solid var(--gold-faint)}
+@media (max-width:1020px){.links,.nav>.btn{display:none}.burger{display:block}.lang{margin-left:auto}.mnav.open{display:flex}}
+
+/* hero */
+.hero{border-top:0;padding-block:clamp(56px,9vw,112px) clamp(48px,7vw,88px);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(42px,6.6vw,82px);line-height:1.02;margin-block:22px 26px}
+.hero .lead{font-size:18px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.audience{margin-top:40px;padding-top:20px;border-top:1px solid var(--gold-faint);font-size:13px;color:var(--dim)}
+.audience b{color:var(--muted);font-weight:500}
+.invest{margin:0;justify-self:end;width:100%;max-width:460px;border:1px solid var(--gold-line);background:radial-gradient(90% 70% at 85% 10%,rgba(201,166,74,.12),transparent 65%),var(--surface);min-width:0}
+.inv-head{display:grid;gap:6px;padding:20px 22px 0}
+.inv-head .k{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.inv-title{font-family:var(--serif);font-size:24px;color:var(--fg);line-height:1.2}
+.inv-title em{font-style:italic;color:var(--gold-hi)}
+.inv-chart{display:block;width:100%;height:auto;padding:4px 10px 0}
+.inv-chart .grid path{stroke:var(--gold-faint);stroke-dasharray:2 6}
+.inv-chart .axis{stroke:var(--gold-line);fill:none}
+.inv-chart .axis-arrow{stroke:var(--gold-line);fill:none}
+.inv-chart .ax{font:500 9.5px var(--mono);letter-spacing:.18em;fill:var(--dim)}
+.inv-chart .st{font:10px var(--mono);letter-spacing:.06em;fill:var(--muted)}
+.inv-chart .b-plan{fill:none;stroke:var(--gold);stroke-dasharray:3 4;opacity:.8}
+.inv-chart .b-solid{fill:var(--gold);stroke:var(--gold);stroke-opacity:.8}
+.inv-chart .floors path{stroke:var(--gold);stroke-opacity:.35}
+.inv-chart .curve{fill:none;stroke:var(--gold-hi);stroke-width:1.6;stroke-dasharray:5 5;animation:flow 1.6s linear infinite}
+.inv-chart .end{fill:var(--gold-hi)}
+.inv-chart .glow{fill:var(--gold-hi);opacity:.18;transform-origin:center;transform-box:fill-box;animation:pulse 2.4s ease-in-out infinite}
+.inv-chart .runner{fill:var(--fg)}
+@keyframes flow{to{stroke-dashoffset:-20}}
+@keyframes pulse{50%{opacity:.05;transform:scale(1.6)}}
+@media (prefers-reduced-motion:reduce){.inv-chart .runner{display:none}}
+.inv-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;padding:14px 22px;border-top:1px solid var(--gold-faint);font-size:12.5px;color:var(--muted)}
+.inv-foot b{font-weight:500;color:var(--gold)}
+.inv-foot .note{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--dim)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.invest{justify-self:start}}
+
+/* figures */
+.figs{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--gold-faint)}
+.fig{padding:28px 24px;border-right:1px solid var(--gold-faint);display:grid;gap:8px;align-content:start}
+.fig:last-child{border-right:0}
+.fig .n{font-family:var(--serif);font-size:clamp(38px,4.6vw,54px);line-height:1;color:var(--gold-hi);font-variant-numeric:tabular-nums}
+.fig p{font-size:13.5px;color:var(--muted)}
+@media (max-width:620px){.figs{grid-template-columns:1fr}.fig{border-right:0;border-bottom:1px solid var(--gold-faint)}.fig:last-child{border-bottom:0}}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px);align-items:start}
+.portrait{aspect-ratio:4/5;max-width:100%;background:linear-gradient(160deg,var(--surface-2),var(--surface));border:1px solid var(--gold-line);position:relative;display:grid;place-items:center}
+.portrait .ph{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;text-align:center;padding:20px}
+.portrait::after{content:"";position:absolute;inset:14px;border:1px solid var(--gold-faint);pointer-events:none}
+.about-body{display:grid;gap:22px;min-width:0}
+.about-body p{color:var(--muted);font-size:17px;max-width:62ch}
+.about-body p:first-of-type{font-family:var(--serif);font-size:clamp(20px,2.2vw,24px);color:var(--fg);line-height:1.45}
+@media (max-width:860px){.about{grid-template-columns:1fr}.portrait{max-width:360px}}
+
+/* method */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--gold-line)}
+.step{padding:28px 24px 8px 0;display:grid;gap:12px;align-content:start;position:relative}
+.step + .step{padding-left:24px;border-left:1px solid var(--gold-faint)}
+.step .num{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.1em}
+.step h3{font-size:24px}
+.step .sub{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.step p{color:var(--muted);font-size:15px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(3){padding-left:0;border-left:0}.step{padding-bottom:28px}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}.step + .step{padding-left:0;border-left:0;border-top:1px solid var(--gold-faint)}}
+
+/* portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.chip{background:none;border:1px solid var(--gold-line);color:var(--muted);padding:8px 14px;font-size:13px;cursor:pointer;font-family:var(--sans)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#17130e}
+.chip:hover{border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media (max-width:980px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--gold-faint);display:flex;flex-direction:column;transition:border-color .25s,transform .25s;min-width:0}
+.card:hover{border-color:var(--gold-line);transform:translateY(-3px)}
+.plate{aspect-ratio:16/10;max-width:100%;position:relative;overflow:hidden;background:radial-gradient(120% 90% at 80% 0%,rgba(201,166,74,.16),transparent 60%),linear-gradient(180deg,var(--surface-2),var(--surface))}
+.plate svg{position:absolute;inset:0;width:100%;height:100%}
+.plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.card:hover .plate img{transform:scale(1.04)}
+.plate::after{content:"";position:absolute;inset:0;box-shadow:inset 0 -60px 60px -40px rgba(27,23,19,.85);pointer-events:none}
+.plate .tag{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);background:rgba(15,13,11,.75);border:1px solid var(--gold-line);padding:5px 8px}
+.card-b{padding:22px 22px 24px;display:grid;gap:10px;flex:1;align-content:start}
+.card h3{font-size:23px;line-height:1.2}
+.spec{font-family:var(--mono);font-size:11.5px;color:var(--gold);letter-spacing:.04em}
+.card p{color:var(--muted);font-size:14.5px}
+.card .more{margin-top:auto;padding-top:10px;font-size:13px;color:var(--gold-hi);display:inline-flex;gap:8px;align-items:center}
+.card .more:hover{text-decoration:underline;text-underline-offset:4px}
+.count{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.more-row{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between;margin-top:36px;padding-top:24px;border-top:1px solid var(--gold-faint)}
+
+/* catalog page */
+.cat-hero{border-top:0;padding-block:clamp(40px,6vw,72px) clamp(32px,5vw,56px)}
+.back{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--muted)}
+.back:hover{color:var(--gold-hi)}
+.cat-h1{font-size:clamp(40px,6vw,72px);line-height:1.05;margin-block:18px 20px}
+.cat-jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}
+.cat-jump button{background:none;border:1px solid var(--gold-line);color:var(--muted);padding:9px 14px;font:13px var(--sans);cursor:pointer;display:inline-flex;gap:8px;align-items:baseline}
+.cat-jump button:hover{border-color:var(--gold);color:var(--gold-hi)}
+.cat-jump small{font-family:var(--mono);font-size:10.5px;color:var(--dim)}
+.group{padding-block:clamp(48px,7vw,80px)}
+.group-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--gold-line)}
+.group-head h2{font-size:clamp(30px,4vw,44px)}
+.group-head span{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--dim)}
+.cat-cta-in{display:grid;gap:20px;justify-items:start}
+
+/* international */
+.intl{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start}
+@media (max-width:900px){.intl{grid-template-columns:1fr}}
+.clocks{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--gold-line);margin-top:34px}
+.clock{padding:22px;display:grid;gap:6px}
+.clock + .clock{border-left:1px solid var(--gold-line)}
+.clock .k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.clock .t{font-family:var(--serif);font-size:clamp(34px,4vw,46px);color:var(--fg);font-variant-numeric:tabular-nums;line-height:1}
+.clock .z{font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
+.remote{display:grid;gap:0;counter-reset:r;border-top:1px solid var(--gold-line)}
+.remote li{list-style:none;display:grid;grid-template-columns:44px 1fr;gap:6px 14px;padding:22px 0;border-bottom:1px solid var(--gold-faint)}
+.remote li::before{counter-increment:r;content:counter(r,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--gold);grid-row:span 2;padding-top:4px}
+.remote h3{font-size:20px}
+.remote p{color:var(--muted);font-size:15px}
+.remote ol{margin:0;padding:0}
+
+/* referrals */
+.ref{background:var(--surface);border-block:1px solid var(--gold-line)}
+.ref-in{display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:end}
+.ref blockquote{margin:0;font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.25;font-weight:300}
+.ref blockquote em{color:var(--gold-hi)}
+.ref-side{display:grid;gap:18px}
+.ref-side p{color:var(--muted)}
+@media (max-width:860px){.ref-in{grid-template-columns:1fr}}
+
+/* profiles */
+.profiles{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gold-faint);border:1px solid var(--gold-faint)}
+.prof{background:var(--bg);padding:30px 24px;display:grid;gap:12px;align-content:start}
+.prof h3{font-size:22px}
+.prof p{color:var(--muted);font-size:15px}
+.prof svg{width:28px;height:28px;color:var(--gold)}
+@media (max-width:900px){.profiles{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.profiles{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+.direct{display:grid;gap:14px;margin-top:30px}
+.direct a,.direct div{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:15px}
+.direct svg{width:18px;height:18px;color:var(--gold);flex:none}
+.direct a:hover{color:var(--gold-hi)}
+form{background:var(--surface);border:1px solid var(--gold-line);padding:clamp(22px,4vw,36px);display:grid;gap:18px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:520px){.row2{grid-template-columns:1fr}}
+label{display:grid;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);min-width:0}
+input,select{width:100%;background:var(--bg);border:1px solid var(--gold-faint);color:var(--fg);padding:13px 14px;font:15px var(--sans);letter-spacing:0;text-transform:none;border-radius:0}
+input:focus,select:focus{border-color:var(--gold);outline:none}
+.form-note{font-size:13px;color:var(--dim)}
+.form-status{font-size:14px;color:var(--gold-hi);border:1px solid var(--gold-line);padding:12px 14px}
+
+footer{border-top:1px solid var(--gold-faint);padding-block:40px;color:var(--dim);font-size:13px}
+.foot{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+.foot nav{display:flex;flex-wrap:wrap;gap:18px}
+.foot a:hover{color:var(--gold-hi)}
+
+.wa-float{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:54px;height:54px;border-radius:50%;background:var(--gold);color:#17130e;display:grid;place-items:center;z-index:30;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.wa-float svg{width:24px;height:24px}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Davi Amadeu"><img src="img/logo-davi-amadeu.png" alt="Davi Amadeu" width="197" height="36"></a>
+    <nav class="links" aria-label="Principal">
+      <a href="index.html#sobre" data-i18n="nav.about">Sobre</a>
+      <a href="index.html#metodo" data-i18n="nav.method">Método</a>
+      <a href="index.html#portfolio" data-i18n="nav.portfolio">Portfólio</a>
+      <a href="index.html#internacional" data-i18n="nav.intl">Internacional</a>
+      <a href="index.html#perfil" data-i18n="nav.who">Para quem</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" id="lang-pt" aria-pressed="true">PT</button>
+      <button type="button" id="lang-en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-gold" href="index.html#contato" data-i18n="nav.cta">Agendar conversa</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Menu móvel">
+    <a href="index.html#sobre" data-i18n="nav.about">Sobre</a>
+    <a href="index.html#metodo" data-i18n="nav.method">Método</a>
+    <a href="index.html#portfolio" data-i18n="nav.portfolio">Portfólio</a>
+    <a href="index.html#internacional" data-i18n="nav.intl">Internacional</a>
+    <a href="index.html#perfil" data-i18n="nav.who">Para quem</a>
+    <a href="index.html#contato" data-i18n="nav.cta">Agendar conversa</a>
+  </nav>
+</header>
+
+<main id="catalogo">
+  <section class="cat-hero">
+    <div class="wrap">
+      <a class="back" href="index.html#portfolio" data-i18n="cat.back">← Voltar ao início</a>
+      <div class="eyebrow" style="margin-top:36px" data-i18n="cat.eyebrow">Portfólio completo</div>
+      <h1 class="cat-h1" data-i18n-html="cat.h1">Todos os <em>empreendimentos</em></h1>
+      <p class="lead" data-i18n="cat.lead">Organizados por construtora. Clique em qualquer empreendimento para falar comigo diretamente sobre ele.</p>
+      <nav class="cat-jump" id="cat-jump" aria-label="Construtoras"></nav>
+    </div>
+  </section>
+  <div id="cat-groups"></div>
+  <section class="cat-cta">
+    <div class="wrap cat-cta-in">
+      <h2 data-i18n-html="cat.cta.h">Não sabe por onde <em>começar?</em></h2>
+      <p class="lead" data-i18n="cat.cta.p">Em 20 minutos de conversa eu indico quais destes fazem sentido para o seu objetivo.</p>
+      <div class="ctas" style="margin-top:0">
+        <a class="btn btn-gold" href="https://wa.me/5517997726975" target="_blank" rel="noopener" data-i18n="cta.wa">Falar no WhatsApp</a>
+        <a class="btn btn-ghost" href="https://calendar.app.google/Z4gEh5GhENEe1SGr7" target="_blank" rel="noopener" data-i18n="cta.call">Agendar uma conversa</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>Davi Amadeu · CRECI-SP 324251 · <span data-i18n="ft.k">Consultoria Imobiliária</span> · São José do Rio Preto, SP</span>
+    <nav aria-label="Rodapé"><a href="index.html#sobre" data-i18n="nav.about">Sobre</a><a href="index.html#portfolio" data-i18n="nav.portfolio">Portfólio</a><a href="index.html#internacional" data-i18n="nav.intl">Internacional</a><a href="https://instagram.com/corretordaviamadeu" target="_blank" rel="noopener">Instagram</a></nav>
+  </div>
+</footer>
+
+<a class="wa-float wa" href="https://wa.me/5517997726975" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script>
+/* =====================================================================
+   CATÁLOGO DE EMPREENDIMENTOS — Davi Amadeu
+   Para incluir um empreendimento: adicione um objeto na lista DEVS.
+   b = construtora (agrupa automaticamente) · n = nome · k = "res" ou "com"
+   s = linha de especificações (pt/en) · d = descrição (pt/en)
+   Fonte dos dados: Ficha Mestra Oficial de cada empreendimento.
+   ===================================================================== */
+const DEVS=[
+ {b:"Tarraf",n:"Copacabana — Praias by Tarraf",img:"img/copacabana.jpg",k:"res",s:{pt:"Região do Plaza Avenida Shopping · 3 suítes · 103 m²",en:"Plaza Avenida Shopping area · 3 suites · 103 m²"},d:{pt:"Quarteirão exclusivo da Tarraf com paisagismo assinado pelo Escritório Burle Marx. Varanda gourmet e áreas de lazer com conceito de praia.",en:"An exclusive Tarraf block with landscaping by the Burle Marx office. Gourmet balconies and beach-inspired leisure areas."}},
+ {b:"Tarraf",n:"Ipanema — Praias by Tarraf",img:"img/ipanema.jpg",k:"res",s:{pt:"2º lançamento do quarteirão · Studio a 2 dorms · 41 a 101 m²",en:"Second launch on the block · Studio to 2 bedrooms · 41 to 101 m²"},d:{pt:"Ao lado do Copacabana, na mesma quadra Praias by Tarraf. Studios e 2 dormitórios com varanda gourmet, perto do Plaza Avenida Shopping.",en:"Next to Copacabana on the same Praias by Tarraf block. Studios and 2-bedroom units with gourmet balconies, close to Plaza Avenida Shopping."}},
+ {b:"Tarraf",n:"Quinta das Amoras",img:"img/quinta.jpg",k:"res",s:{pt:"Região da Represa · 2 dorms · 46 a 52 m²",en:"Represa area · 2 bedrooms · 46 to 52 m²"},d:{pt:"3 torres exclusivas (Terra, Céu e Bosque) num terreno de mais de 23 mil m², com bosque de mais de 2.000 m² e pista de caminhada. Unidades com garden privativo no térreo.",en:"Three towers (Terra, Céu and Bosque) on a site of over 23,000 m², with a woodland of over 2,000 m² and a walking trail. Ground-floor units with private gardens."}},
+ {b:"Tarraf",n:"Monreal by Tarraf",img:"img/monreal.jpg",k:"res",s:{pt:"Recanto Real, Av. JK · 3 suítes · 140 m²",en:"Recanto Real, Av. JK · 3 suites · 140 m²"},d:{pt:"Depois do Montelena, a Tarraf leva ao Recanto Real um novo conceito assinado por Rivaben Arquitetura, paisagismo do escritório Burle Marx e interiores de Cristina Barbara.",en:"After Montelena, Tarraf brings a new concept to Recanto Real: architecture by Rivaben, landscaping by the Burle Marx office and interiors by Cristina Barbara."}},
+ {b:"Tarraf",n:"Nau Vivendas",img:"img/nau.jpg",k:"res",s:{pt:"Bairro Vivendas, Zona Sul · 2 e 3 dorms · 51 a 68 m²",en:"Vivendas, South Zone · 2 and 3 bedrooms · 51 to 68 m²"},d:{pt:"Três torres (Sol, Mar e Lua) em frente ao Parque Ecológico, com áreas sociais entregues equipadas e decoradas e acesso direto pelo anel viário.",en:"Three towers (Sol, Mar and Lua) facing the Ecological Park, with common areas delivered furnished and decorated, and direct access from the ring road."}},
+ {b:"Perplan",n:"Apoema Residence",img:"img/apoema.jpg",k:"res",s:{pt:"Reservas do Sul · 1 a 3 suítes · 87 a 134 m²",en:"Reservas do Sul · 1 to 3 suites · 87 to 134 m²"},d:{pt:"Torre única projetada pela Oliveira Cotta Arquitetura, com academia elevada voltada para a praça central. Minutos do Shopping Iguatemi.",en:"A single tower designed by Oliveira Cotta Arquitetura, with an elevated gym facing the central square. Minutes from Shopping Iguatemi."}},
+ {b:"Hugo Fabri",n:"Cambuí Reserva da Mata",img:"img/cambui.jpg",k:"res",s:{pt:"Reserva da Mata · 1 a 3 suítes · 64 a 112 m²",en:"Reserva da Mata · 1 to 3 suites · 64 to 112 m²"},d:{pt:"Torre única no bairro Reserva da Mata, próxima ao Plaza Shopping e ao Parque Dr. Fred Navarro.",en:"A single tower in Reserva da Mata, close to Plaza Shopping and Dr. Fred Navarro Park."}},
+ {b:"Fex Engenharia",n:"Áuri Wellness Living",img:"img/auri.jpg",k:"res",s:{pt:"Jardim Maracanã · Studio a 2 suítes · 36 a 67 m²",en:"Jardim Maracanã · Studio to 2 suites · 36 to 67 m²"},d:{pt:"Wellness living da Fex Engenharia com sauna seca, sauna úmida, banheira de gelo e academia com equipamentos Reebok. Um dos primeiros prédios do bairro após a abertura à verticalização.",en:"A wellness living project by Fex Engenharia with dry and steam saunas, an ice bath and a gym with Reebok equipment. One of the first towers in the neighborhood since high-rise zoning opened."}},
+ {b:"Unicos",n:"Giulia Boulevard Residencial",img:"img/giulia.jpg",k:"res",s:{pt:"Região Oeste, 5 min do aeroporto · 2 dorms · 49 a 57 m²",en:"West side, 5 min from the airport · 2 bedrooms · 49 to 57 m²"},d:{pt:"Lazer completo (15 itens), segurança 24h e portaria independente para visitantes e moradores. Duas torres na região oeste, a 5 minutos do aeroporto.",en:"Full leisure area (15 amenities), 24h security and an independent lobby for residents and visitors. Two towers on the west side, 5 minutes from the airport."}},
+ {b:"Bild",n:"Murano",k:"res",s:{pt:"Zona Sul, ao lado do Shopping Iguatemi · 1 a 3 suítes · até 200 m²",en:"South Zone, next to Shopping Iguatemi · 1 to 3 suites · up to 200 m²"},d:{pt:"Inspirado na ilha italiana de Murano. Torre única com 160 unidades, rooftop e lazer completo a poucos passos do Shopping Iguatemi.",en:"Inspired by the Italian island of Murano. A single tower with 160 units, a rooftop and full leisure, steps from Shopping Iguatemi."}},
+ {b:"Bild",n:"VIVEN",k:"res",s:{pt:"Jardim Novo Mundo, Zona Sul · 2 a 3 dorms (1 suíte) · 59,95 a 95,83 m²",en:"Jardim Novo Mundo, South Zone · 2 to 3 bedrooms (1 suite) · 59.95 to 95.83 m²"},d:{pt:"Torre única a poucos minutos do Riopreto Shopping e do Plaza Avenida Shopping. Lazer entregue decorado e equipado, com coworking e espaço pet.",en:"A single tower minutes from Riopreto Shopping and Plaza Avenida Shopping. Leisure areas delivered furnished, with coworking and a pet space."}},
+ {b:"Bild",n:"The City Tower",k:"com",s:{pt:"Parque São Miguel · Salas comerciais e lojas · 32 a 98 m²",en:"Parque São Miguel · Offices and retail · 32 to 98 m²"},d:{pt:"Torre corporativa da Bild com open mall integrado e rooftop com estrutura para restaurante, na Av. Jornalista Roberto Marinho, perto do Centro e da BR-153.",en:"A Bild corporate tower with an integrated open mall and a rooftop built for a restaurant, on Av. Jornalista Roberto Marinho, near downtown and the BR-153 highway."}},
+ {b:"Stefani Nogueira",n:"Sky Redentora",img:"img/sky.jpg",k:"res",s:{pt:"Vila Redentora · 2 e 3 dorms (1 suíte) · 63 a 122 m²",en:"Vila Redentora · 2 and 3 bedrooms (1 suite) · 63 to 122 m²"},d:{pt:"Duas torres (Sírius e Órion), mais de 20 itens de lazer e varanda gourmet, com arquitetura de Henrique Cambiaghi. Perto da Av. Bady Bassit, do Pão de Açúcar e da Unimed.",en:"Two towers (Sírius and Órion), more than 20 leisure amenities and gourmet balconies, designed by Henrique Cambiaghi. Close to Av. Bady Bassit, Pão de Açúcar and Unimed."}},
+ {b:"Stefani Nogueira",n:"High Redentora",img:"img/high.jpg",k:"res",s:{pt:"Redentora · 2 e 3 dorms (1 suíte) · 59 a 105 m²",en:"Redentora · 2 and 3 bedrooms (1 suite) · 59 to 105 m²"},d:{pt:"Duas torres com 300 apartamentos, lojas no térreo e áreas comuns entregues equipadas e decoradas. A poucos minutos da Famerp, da Beneficência Portuguesa e do Rio Preto Shopping.",en:"Two towers with 300 apartments, ground-floor retail and common areas delivered furnished. Minutes from Famerp, Beneficência Portuguesa hospital and Rio Preto Shopping."}},
+ {b:"FAJ Empreendimentos",n:"SoHo Business",img:"img/soho.jpg",k:"com",s:{pt:"Reservas do Sul · Salas comerciais · 32 a 1.080 m²",en:"Reservas do Sul · Offices · 32 to 1,080 m²"},d:{pt:"Torre corporativa com 415 salas, 21 pavimentos e 611 vagas, na Av. José Trefiglio. Perto do Shopping Iguatemi e com acesso facilitado à BR-153.",en:"A corporate tower with 415 offices, 21 floors and 611 parking spaces on Av. José Trefiglio. Close to Shopping Iguatemi, with easy access to the BR-153 highway."}},
+ {b:"RVE",n:"Jazz",img:"img/jazz.jpg",k:"res",s:{pt:"Zona Sul · 2 e 3 dorms com suíte · 67 a 80 m²",en:"South Zone · 2 and 3 bedrooms with suite · 67 to 80 m²"},d:{pt:"Plantas com até 2 vagas e depósito privativo, club house com piscina, coworking e gerador para o condomínio. Entrega contratual prevista para março de 2027.",en:"Units with up to 2 parking spaces and private storage, a clubhouse with pool, coworking and a building generator. Contractual delivery scheduled for March 2027."}},
+ {b:"Construtora Giglio",n:"Residencial Comendador Silvio Giglio",img:"img/giglio.jpg",k:"res",s:{pt:"Boa Vista, região central · 2 dorms (1 suíte) e coberturas · 76 a 234 m²",en:"Boa Vista, central area · 2 bedrooms (1 suite) and penthouses · 76 to 234 m²"},d:{pt:"Pronto para morar. Três blocos (Turim, Napoli e Genova), varanda com churrasqueira e lazer com piscinas, academia climatizada e espaço gourmet.",en:"Ready to move in. Three buildings (Turim, Napoli and Genova), balconies with barbecue, pools, an air-conditioned gym and a gourmet area."}},
+ {b:"Costantini Incorporadora",n:"Casa Paulistano",img:"img/casa.jpg",k:"res",s:{pt:"Próximo ao Shopping Iguatemi · 3 e 4 suítes · 204 a 475 m²",en:"Near Shopping Iguatemi · 3 and 4 suites · 204 to 475 m²"},d:{pt:"Primeiro lançamento vertical da Costantini: torre única com 68 apartamentos, elevador privativo, opções de duplex com piscina privativa e arquitetura inspirada na brasilidade.",en:"Costantini's first high-rise: a single tower with 68 apartments, private elevator access, duplex options with private pools and architecture inspired by Brazilian design."}},
+ {b:"Vitta Residencial",n:"Vitta Bromélias",img:"img/bromelias.jpg",k:"res",s:{pt:"Fazenda Felicidade · 1 dorm · 28 a 36 m²",en:"Fazenda Felicidade · 1 bedroom · 28 to 36 m²"},d:{pt:"360 apartamentos com opções de garden privativo, piscina adulto e infantil, playground, pomar e espaço pet. A 2 minutos do Anel Viário.",en:"360 apartments with private garden options, adult and children's pools, a playground, an orchard and a pet area. Two minutes from the Anel Viário ring road."}},
+ {b:"Vitta Residencial",n:"Vitta Trinità",img:"img/trinita.jpg",k:"res",s:{pt:"Fazenda Rio Preto (Jardim Yolanda) · 2 dorms · 50 a 56 m²",en:"Fazenda Rio Preto (Jardim Yolanda) · 2 bedrooms · 50 to 56 m²"},d:{pt:"Três torres com 386 apartamentos, opções com suíte e garden privativo, lazer na cobertura e mercado dentro do condomínio.",en:"Three towers with 386 apartments, options with a suite and private garden, rooftop leisure and an on-site market."}},
+ {b:"Impper",n:"Vista Impper",img:"img/vista.jpg",k:"res",s:{pt:"Catanduva, SP · Jardim Sotto · 2 e 3 dorms · 68 a 85 m²",en:"Catanduva, SP · Jardim Sotto · 2 and 3 bedrooms · 68 to 85 m²"},d:{pt:"Torre com 20 pavimentos, quadra de beach tennis, piscina, academia climatizada e coworking, na Av. Engenheiro José Nelson Machado.",en:"A 20-storey tower with a beach tennis court, pool, air-conditioned gym and coworking, on Av. Engenheiro José Nelson Machado."}}
+];
+
+const T={
+ en:{
+  "nav.about":"About",
+  "nav.method":"Method",
+  "nav.portfolio":"Portfolio",
+  "nav.intl":"International",
+  "nav.who":"Who I serve",
+  "nav.cta":"Book a call",
+  "cat.back":"← Back to home",
+  "cat.eyebrow":"Full portfolio",
+  "cat.h1":"All <em>projects</em>",
+  "cat.lead":"Organized by developer. Click any project to talk to me about it directly.",
+  "cat.cta.h":"Not sure where <em>to start?</em>",
+  "cat.cta.p":"In a 20-minute conversation I'll point out which of these fit your goal.",
+  "cta.wa":"Message on WhatsApp",
+  "cta.call":"Book a conversation",
+  "ft.k":"Real Estate Advisory"
+ }
+};
+const PT={};
+document.querySelectorAll("[data-i18n]").forEach(e=>PT[e.dataset.i18n]=e.textContent);
+document.querySelectorAll("[data-i18n-html]").forEach(e=>PT[e.dataset.i18nHtml]=e.innerHTML);
+T.pt=PT;
+const UI={
+ pt:{res:"Residencial",com:"Comercial",count:(n,t)=>`Mostrando ${n} de ${t} empreendimentos · São José do Rio Preto, SP`,moreAll:t=>`Ver todos os ${t} empreendimentos`,nDev:n=>`${n} empreendimento${n>1?"s":""}`,more:"Quero saber mais sobre este",msg:n=>`Olá, Davi! Vi o ${n} no seu site e quero saber mais.`,ref:"Olá, Davi! Quero te indicar uma pessoa interessada em investir em imóveis.",ok:"",err:"Preencha nome e WhatsApp para continuar."},
+ en:{res:"Residential",com:"Commercial",count:(n,t)=>`Showing ${n} of ${t} projects · São José do Rio Preto, Brazil`,moreAll:t=>`See all ${t} projects`,nDev:n=>`${n} project${n>1?"s":""}`,more:"Ask me about this project",msg:n=>`Hi Davi! I saw ${n} on your website and would like to know more.`,ref:"Hi Davi! I'd like to refer someone interested in investing in property in Brazil.",ok:"",err:"Please fill in your name and WhatsApp to continue."}
+};
+let lang="pt";
+
+function plate(d,i){
+  if(d.img) return `<img src="${d.img}" alt="${d.n}" loading="lazy" width="800" height="500">`;
+  const seed=d.n.length*7+i*13, h=40+(seed%40), w=26+(seed%18), x=150+(seed%60);
+  const floors=Math.round(h/8);
+  let lines="";for(let f=1;f<floors;f++){lines+=`<path d="M${x} ${200-f*14}h${w*2}" opacity=".35"/>`}
+  return `<svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMax slice" fill="none" stroke="#c9a64a" stroke-width="1">
+   <path d="M0 200h400" opacity=".5"/><path d="M${x} 200V${200-floors*14}h${w*2}V200" />${lines}
+   <path d="M${x-80} 200V${230-floors*10}h${w}V200" opacity=".45"/><path d="M${x+w*2+30} 200V${210-floors*9}h${w}V200" opacity=".45"/></svg>`;
+}
+function card(d,i){
+  const a=document.createElement("article");a.className="card";
+  const href="https://wa.me/5517997726975?text="+encodeURIComponent(UI[lang].msg(d.n));
+  a.innerHTML=`<div class="plate">${plate(d,i)}</div><div class="card-b"><span class="spec">${UI[lang][d.k]} · ${d.s[lang]}</span><h3>${d.n}</h3><p>${d.d[lang]}</p><a class="more" href="${href}" target="_blank" rel="noopener">${UI[lang].more} →</a></div>`;
+  return a;
+}
+function slug(t){return t.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g,"-")}
+function renderCatalog(){
+  const groups=[];DEVS.forEach((d,i)=>{let g=groups.find(x=>x.b===d.b);if(!g){g={b:d.b,items:[]};groups.push(g)}g.items.push([d,i])});
+  const jump=document.getElementById("cat-jump");jump.innerHTML="";
+  const wrap=document.getElementById("cat-groups");wrap.innerHTML="";
+  groups.forEach(g=>{
+    const id="c-"+slug(g.b);
+    const btn=document.createElement("button");btn.type="button";btn.innerHTML=`${g.b} <small>${g.items.length}</small>`;
+    btn.onclick=()=>document.getElementById(id).scrollIntoView({behavior:"smooth"});jump.appendChild(btn);
+    const sec=document.createElement("section");sec.className="group";sec.id=id;
+    sec.innerHTML=`<div class="wrap"><div class="group-head"><h2>${g.b}</h2><span>${UI[lang].nDev(g.items.length)}</span></div><div class="grid"></div></div>`;
+    const grid=sec.querySelector(".grid");g.items.forEach(([d,i])=>grid.appendChild(card(d,i)));
+    wrap.appendChild(sec);
+  });
+}
+function setLang(l){
+  lang=l;document.documentElement.lang=l==="pt"?"pt-BR":"en";
+  document.querySelectorAll("[data-i18n]").forEach(e=>{const v=T[l][e.dataset.i18n];if(v!==undefined)e.textContent=v});
+  document.querySelectorAll("[data-i18n-html]").forEach(e=>{const v=T[l][e.dataset.i18nHtml];if(v!==undefined)e.innerHTML=v});
+  document.getElementById("lang-pt").setAttribute("aria-pressed",String(l==="pt"));
+  document.getElementById("lang-en").setAttribute("aria-pressed",String(l==="en"));
+  document.querySelectorAll('a[href^="index.html"]').forEach(a=>{a.href=a.getAttribute("href").replace(/#en$/,"")});
+  renderCatalog();
+  try{localStorage.setItem("da-lang",l)}catch(e){}
+}
+document.getElementById("lang-pt").onclick=()=>setLang("pt");
+document.getElementById("lang-en").onclick=()=>setLang("en");
+const burger=document.getElementById("burger"),mnav=document.getElementById("mnav");
+burger.onclick=()=>{const o=mnav.classList.toggle("open");burger.setAttribute("aria-expanded",String(o))};
+let start="pt";
+if(location.hash==="#en")start="en";
+else{let saved=null;try{saved=localStorage.getItem("da-lang")}catch(e){}
+  start=saved||((navigator.language||"pt").toLowerCase().startsWith("pt")?"pt":"en");}
+setLang(start);
+</script>
+</body>
+</html>
