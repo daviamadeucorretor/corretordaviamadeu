@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Davi Amadeu | Consultoria em Investimentos Imobiliários</title>
+<meta name="description" content="Consultoria em imóveis na planta para investidores, médicos, empresários e brasileiros no exterior. Atendimento em São José do Rio Preto e a distância.">
+<link rel="canonical" href="https://www.corretordaviamadeu.com.br/">
+<meta name="theme-color" content="#0f0d0b">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Davi Amadeu">
+<meta property="og:title" content="Davi Amadeu | Consultoria em Investimentos Imobiliários">
+<meta property="og:description" content="Consultoria em imóveis na planta para investidores, médicos, empresários e brasileiros no exterior. Atendimento em São José do Rio Preto e a distância.">
+<meta property="og:url" content="https://www.corretordaviamadeu.com.br/">
+<meta property="og:image" content="https://www.corretordaviamadeu.com.br/img/og-davi-amadeu.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: editorial single column, dark "noite de obra" ground, gold hairlines as architectural drawing lines. Identity kept from the current site. */
+:root{
+  --bg:#0f0d0b; --surface:#1b1713; --surface-2:#252019;
+  --gold:#c9a64a; --gold-hi:#e7c878; --gold-line:rgba(201,166,74,.28); --gold-faint:rgba(201,166,74,.10);
+  --fg:#f4efe4; --muted:#cfc8b8; --dim:#948c7e;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --wrap:1180px; --gutter:clamp(16px,4vw,40px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4.2vw,48px);line-height:1.1}
+h2 em,h1 em{font-style:italic;color:var(--gold-hi)}
+p{margin:0}
+.lead{color:var(--muted);font-size:17px;max-width:58ch}
+section{padding-block:clamp(72px,10vw,128px);border-top:1px solid var(--gold-faint)}
+.sec-head{display:grid;gap:18px;margin-bottom:clamp(40px,6vw,64px);max-width:760px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;font-size:14px;font-weight:500;border:1px solid var(--gold-line);transition:background .2s,border-color .2s,color .2s;cursor:pointer;font-family:var(--sans)}
+.btn-gold{background:var(--gold);color:#17130e;border-color:var(--gold)}
+.btn-gold:hover{background:var(--gold-hi);border-color:var(--gold-hi)}
+.btn-ghost{color:var(--fg);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-hi)}
+.btn svg{width:16px;height:16px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(15,13,11,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--gold-faint)}
+.nav{display:flex;align-items:center;gap:24px;height:68px}
+.brand{display:flex;align-items:center;flex:none}
+.brand img{height:30px;width:auto;display:block}
+@media (max-width:420px){.brand img{height:24px}}
+.links{display:flex;gap:22px;margin-left:auto;font-size:13px;color:var(--muted)}
+.links a:hover{color:var(--gold-hi)}
+.lang{display:flex;border:1px solid var(--gold-line);font-family:var(--mono);font-size:11px;letter-spacing:.1em}
+.lang button{background:none;border:0;color:var(--dim);padding:7px 10px;cursor:pointer;font:inherit}
+.lang button[aria-pressed="true"]{background:var(--gold-faint);color:var(--gold-hi)}
+.nav .btn{padding:9px 16px;font-size:13px}
+.burger{display:none;background:none;border:1px solid var(--gold-line);color:var(--fg);width:40px;height:40px;cursor:pointer}
+.mnav{display:none;flex-direction:column;gap:4px;padding:8px var(--gutter) 20px;border-top:1px solid var(--gold-faint)}
+.mnav a{padding:10px 0;color:var(--muted);border-bottom:1px solid var(--gold-faint)}
+@media (max-width:1020px){.links,.nav>.btn{display:none}.burger{display:block}.lang{margin-left:auto}.mnav.open{display:flex}}
+
+/* hero */
+.hero{border-top:0;padding-block:clamp(56px,9vw,112px) clamp(48px,7vw,88px);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(42px,6.6vw,82px);line-height:1.02;margin-block:22px 26px}
+.hero .lead{font-size:18px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.audience{margin-top:40px;padding-top:20px;border-top:1px solid var(--gold-faint);font-size:13px;color:var(--dim)}
+.audience b{color:var(--muted);font-weight:500}
+.invest{margin:0;justify-self:end;width:100%;max-width:460px;border:1px solid var(--gold-line);background:radial-gradient(90% 70% at 85% 10%,rgba(201,166,74,.12),transparent 65%),var(--surface);min-width:0}
+.inv-head{display:grid;gap:6px;padding:20px 22px 0}
+.inv-head .k{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.inv-title{font-family:var(--serif);font-size:24px;color:var(--fg);line-height:1.2}
+.inv-title em{font-style:italic;color:var(--gold-hi)}
+.inv-chart{display:block;width:100%;height:auto;padding:4px 10px 0}
+.inv-chart .grid path{stroke:var(--gold-faint);stroke-dasharray:2 6}
+.inv-chart .axis{stroke:var(--gold-line);fill:none}
+.inv-chart .axis-arrow{stroke:var(--gold-line);fill:none}
+.inv-chart .ax{font:500 9.5px var(--mono);letter-spacing:.18em;fill:var(--dim)}
+.inv-chart .st{font:10px var(--mono);letter-spacing:.06em;fill:var(--muted)}
+.inv-chart .b-plan{fill:none;stroke:var(--gold);stroke-dasharray:3 4;opacity:.8}
+.inv-chart .b-solid{fill:var(--gold);stroke:var(--gold);stroke-opacity:.8}
+.inv-chart .floors path{stroke:var(--gold);stroke-opacity:.35}
+.inv-chart .curve{fill:none;stroke:var(--gold-hi);stroke-width:1.6;stroke-dasharray:5 5;animation:flow 1.6s linear infinite}
+.inv-chart .end{fill:var(--gold-hi)}
+.inv-chart .glow{fill:var(--gold-hi);opacity:.18;transform-origin:center;transform-box:fill-box;animation:pulse 2.4s ease-in-out infinite}
+.inv-chart .runner{fill:var(--fg)}
+@keyframes flow{to{stroke-dashoffset:-20}}
+@keyframes pulse{50%{opacity:.05;transform:scale(1.6)}}
+@media (prefers-reduced-motion:reduce){.inv-chart .runner{display:none}}
+.inv-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;padding:14px 22px;border-top:1px solid var(--gold-faint);font-size:12.5px;color:var(--muted)}
+.inv-foot b{font-weight:500;color:var(--gold)}
+.inv-foot .note{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--dim)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.invest{justify-self:start}}
+
+/* figures */
+.figs{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--gold-faint)}
+.fig{padding:28px 24px;border-right:1px solid var(--gold-faint);display:grid;gap:8px;align-content:start}
+.fig:last-child{border-right:0}
+.fig .n{font-family:var(--serif);font-size:clamp(38px,4.6vw,54px);line-height:1;color:var(--gold-hi);font-variant-numeric:tabular-nums}
+.fig p{font-size:13.5px;color:var(--muted)}
+@media (max-width:620px){.figs{grid-template-columns:1fr}.fig{border-right:0;border-bottom:1px solid var(--gold-faint)}.fig:last-child{border-bottom:0}}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px);align-items:start}
+.portrait{aspect-ratio:4/5;max-width:100%;background:linear-gradient(160deg,var(--surface-2),var(--surface));border:1px solid var(--gold-line);position:relative;display:grid;place-items:center}
+.portrait .ph{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;text-align:center;padding:20px}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.portrait::after{content:"";position:absolute;inset:14px;border:1px solid var(--gold-faint);pointer-events:none}
+.about-body{display:grid;gap:22px;min-width:0}
+.about-body p{color:var(--muted);font-size:17px;max-width:62ch}
+.about-body p:first-of-type{font-family:var(--serif);font-size:clamp(20px,2.2vw,24px);color:var(--fg);line-height:1.45}
+@media (max-width:860px){.about{grid-template-columns:1fr}.portrait{max-width:360px}}
+
+/* method */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--gold-line)}
+.step{padding:28px 24px 8px 0;display:grid;gap:12px;align-content:start;position:relative}
+.step + .step{padding-left:24px;border-left:1px solid var(--gold-faint)}
+.step .num{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.1em}
+.step h3{font-size:24px}
+.step .sub{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.step p{color:var(--muted);font-size:15px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(3){padding-left:0;border-left:0}.step{padding-bottom:28px}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}.step + .step{padding-left:0;border-left:0;border-top:1px solid var(--gold-faint)}}
+
+/* portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.chip{background:none;border:1px solid var(--gold-line);color:var(--muted);padding:8px 14px;font-size:13px;cursor:pointer;font-family:var(--sans)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#17130e}
+.chip:hover{border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media (max-width:980px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--gold-faint);display:flex;flex-direction:column;transition:border-color .25s,transform .25s;min-width:0}
+.card:hover{border-color:var(--gold-line);transform:translateY(-3px)}
+.plate{aspect-ratio:16/10;max-width:100%;position:relative;overflow:hidden;background:radial-gradient(120% 90% at 80% 0%,rgba(201,166,74,.16),transparent 60%),linear-gradient(180deg,var(--surface-2),var(--surface))}
+.plate svg{position:absolute;inset:0;width:100%;height:100%}
+.plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.card:hover .plate img{transform:scale(1.04)}
+.plate::after{content:"";position:absolute;inset:0;box-shadow:inset 0 -60px 60px -40px rgba(27,23,19,.85);pointer-events:none}
+.plate .tag{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);background:rgba(15,13,11,.75);border:1px solid var(--gold-line);padding:5px 8px}
+.card-b{padding:22px 22px 24px;display:grid;gap:10px;flex:1;align-content:start}
+.card h3{font-size:23px;line-height:1.2}
+.spec{font-family:var(--mono);font-size:11.5px;color:var(--gold);letter-spacing:.04em}
+.card p{color:var(--muted);font-size:14.5px}
+.card .more{margin-top:auto;padding-top:10px;font-size:13px;color:var(--gold-hi);display:inline-flex;gap:8px;align-items:center}
+.card .more:hover{text-decoration:underline;text-underline-offset:4px}
+.count{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.more-row{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between;margin-top:36px;padding-top:24px;border-top:1px solid var(--gold-faint)}
+
+/* catalog page */
+.cat-hero{border-top:0;padding-block:clamp(40px,6vw,72px) clamp(32px,5vw,56px)}
+.back{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--muted)}
+.back:hover{color:var(--gold-hi)}
+.cat-h1{font-size:clamp(40px,6vw,72px);line-height:1.05;margin-block:18px 20px}
+.cat-jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}
+.cat-jump button{background:none;border:1px solid var(--gold-line);color:var(--muted);padding:9px 14px;font:13px var(--sans);cursor:pointer;display:inline-flex;gap:8px;align-items:baseline}
+.cat-jump button:hover{border-color:var(--gold);color:var(--gold-hi)}
+.cat-jump small{font-family:var(--mono);font-size:10.5px;color:var(--dim)}
+.group{padding-block:clamp(48px,7vw,80px)}
+.group-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--gold-line)}
+.group-head h2{font-size:clamp(30px,4vw,44px)}
+.group-head span{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--dim)}
+.cat-cta-in{display:grid;gap:20px;justify-items:start}
+
+/* international */
+.intl{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start}
+@media (max-width:900px){.intl{grid-template-columns:1fr}}
+.clocks{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--gold-line);margin-top:34px}
+.clock{padding:22px;display:grid;gap:6px}
+.clock + .clock{border-left:1px solid var(--gold-line)}
+.clock .k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.clock .t{font-family:var(--serif);font-size:clamp(34px,4vw,46px);color:var(--fg);font-variant-numeric:tabular-nums;line-height:1}
+.clock .z{font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
+.remote{display:grid;gap:0;counter-reset:r;border-top:1px solid var(--gold-line)}
+.remote li{list-style:none;display:grid;grid-template-columns:44px 1fr;gap:6px 14px;padding:22px 0;border-bottom:1px solid var(--gold-faint)}
+.remote li::before{counter-increment:r;content:counter(r,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--gold);grid-row:span 2;padding-top:4px}
+.remote h3{font-size:20px}
+.remote p{color:var(--muted);font-size:15px}
+.remote ol{margin:0;padding:0}
+
+/* referrals */
+.ref{background:var(--surface);border-block:1px solid var(--gold-line)}
+.ref-in{display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:end}
+.ref blockquote{margin:0;font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.25;font-weight:300}
+.ref blockquote em{color:var(--gold-hi)}
+.ref-side{display:grid;gap:18px}
+.ref-side p{color:var(--muted)}
+@media (max-width:860px){.ref-in{grid-template-columns:1fr}}
+
+/* profiles */
+.profiles{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gold-faint);border:1px solid var(--gold-faint)}
+.prof{background:var(--bg);padding:30px 24px;display:grid;gap:12px;align-content:start}
+.prof h3{font-size:22px}
+.prof p{color:var(--muted);font-size:15px}
+.prof svg{width:28px;height:28px;color:var(--gold)}
+@media (max-width:900px){.profiles{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.profiles{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+.direct{display:grid;gap:14px;margin-top:30px}
+.direct a,.direct div{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:15px}
+.direct svg{width:18px;height:18px;color:var(--gold);flex:none}
+.direct a:hover{color:var(--gold-hi)}
+form{background:var(--surface);border:1px solid var(--gold-line);padding:clamp(22px,4vw,36px);display:grid;gap:18px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:520px){.row2{grid-template-columns:1fr}}
+label{display:grid;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);min-width:0}
+input,select{width:100%;background:var(--bg);border:1px solid var(--gold-faint);color:var(--fg);padding:13px 14px;font:15px var(--sans);letter-spacing:0;text-transform:none;border-radius:0}
+input:focus,select:focus{border-color:var(--gold);outline:none}
+.form-note{font-size:13px;color:var(--dim)}
+.form-status{font-size:14px;color:var(--gold-hi);border:1px solid var(--gold-line);padding:12px 14px}
+
+footer{border-top:1px solid var(--gold-faint);padding-block:40px;color:var(--dim);font-size:13px}
+.foot{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+.foot nav{display:flex;flex-wrap:wrap;gap:18px}
+.foot a:hover{color:var(--gold-hi)}
+
+.wa-float{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:54px;height:54px;border-radius:50%;background:var(--gold);color:#17130e;display:grid;place-items:center;z-index:30;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.wa-float svg{width:24px;height:24px}
+
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Davi Amadeu"><img src="img/logo-davi-amadeu.png" alt="Davi Amadeu" width="197" height="36"></a>
+    <nav class="links" aria-label="Principal">
+      <a href="#sobre" data-i18n="nav.about">Sobre</a>
+      <a href="#metodo" data-i18n="nav.method">Método</a>
+      <a href="#portfolio" data-i18n="nav.portfolio">Portfólio</a>
+      <a href="#internacional" data-i18n="nav.intl">Internacional</a>
+      <a href="#perfil" data-i18n="nav.who">Para quem</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" id="lang-pt" aria-pressed="true">PT</button>
+      <button type="button" id="lang-en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-gold" href="#contato" data-i18n="nav.cta">Agendar conversa</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Menu móvel">
+    <a href="#sobre" data-i18n="nav.about">Sobre</a>
+    <a href="#metodo" data-i18n="nav.method">Método</a>
+    <a href="#portfolio" data-i18n="nav.portfolio">Portfólio</a>
+    <a href="#internacional" data-i18n="nav.intl">Internacional</a>
+    <a href="#perfil" data-i18n="nav.who">Para quem</a>
+    <a href="#contato" data-i18n="nav.cta">Agendar conversa</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow" data-i18n="hero.eyebrow">Consultoria em investimentos imobiliários · Brasil</div>
+        <h1 data-i18n-html="hero.h1">Todo grande patrimônio começa <em>numa planta.</em></h1>
+        <p class="lead" data-i18n="hero.lead">Análise, seleção e acompanhamento de imóveis na planta para quem enxerga o mercado imobiliário como estratégia de patrimônio. Atendimento presencial em São José do Rio Preto e a distância para clientes em qualquer lugar do mundo.</p>
+        <div class="ctas">
+          <a class="btn btn-gold wa" href="https://wa.me/5517997726975" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+            <span data-i18n="cta.wa">Falar no WhatsApp</span></a>
+          <a class="btn btn-ghost" href="https://calendar.app.google/Z4gEh5GhENEe1SGr7" target="_blank" rel="noopener" data-i18n="cta.call">Agendar uma conversa</a>
+        </div>
+        <p class="audience"><b data-i18n="hero.aud.k">Atendimento voltado a</b> <span data-i18n="hero.aud">investidores · médicos · empresários · brasileiros no exterior · clientes internacionais</span></p>
+      </div>
+      <figure class="invest">
+        <div class="inv-head">
+          <span class="k" data-i18n="hero.inv.k">Tese de investimento</span>
+          <span class="inv-title" data-i18n-html="hero.inv.t">Do terreno <em>ao patrimônio</em></span>
+        </div>
+        <svg class="inv-chart" viewBox="0 0 440 400" role="img" aria-labelledby="inv-desc">
+          <desc id="inv-desc" data-i18n="hero.inv.desc">Ilustração: o imóvel na planta evolui por etapas de obra até a entrega das chaves, formando patrimônio.</desc>
+          <g class="grid"><path d="M40 300H430M40 240H430M40 180H430M40 120H430M40 60H430"/></g>
+          <path class="axis" d="M40 30V360H430"/>
+          <path class="axis-arrow" d="M35 38l5-10 5 10"/>
+          <text x="52" y="40" class="ax" data-i18n="hero.inv.y">PATRIMÔNIO</text>
+          <rect x="55.0" y="314" width="46" height="46" class="b-plan"/><text x="78" y="384" text-anchor="middle" class="st" data-i18n="hero.s1">Planta</text><rect x="135.0" y="268" width="46" height="92" class="b-solid" fill-opacity="0.1"/><g class="floors"><path d="M135.0 342h46"/><path d="M135.0 324h46"/><path d="M135.0 306h46"/><path d="M135.0 288h46"/><path d="M135.0 270h46"/></g><text x="158" y="384" text-anchor="middle" class="st" data-i18n="hero.s2">Fundação</text><rect x="215.0" y="218" width="46" height="142" class="b-solid" fill-opacity="0.18"/><g class="floors"><path d="M215.0 342h46"/><path d="M215.0 324h46"/><path d="M215.0 306h46"/><path d="M215.0 288h46"/><path d="M215.0 270h46"/><path d="M215.0 252h46"/><path d="M215.0 234h46"/></g><text x="238" y="384" text-anchor="middle" class="st" data-i18n="hero.s3">Estrutura</text><rect x="295.0" y="162" width="46" height="198" class="b-solid" fill-opacity="0.28"/><g class="floors"><path d="M295.0 342h46"/><path d="M295.0 324h46"/><path d="M295.0 306h46"/><path d="M295.0 288h46"/><path d="M295.0 270h46"/><path d="M295.0 252h46"/><path d="M295.0 234h46"/><path d="M295.0 216h46"/><path d="M295.0 198h46"/><path d="M295.0 180h46"/></g><text x="318" y="384" text-anchor="middle" class="st" data-i18n="hero.s4">Acabamento</text><rect x="375.0" y="98" width="46" height="262" class="b-solid" fill-opacity="0.42"/><g class="floors"><path d="M375.0 342h46"/><path d="M375.0 324h46"/><path d="M375.0 306h46"/><path d="M375.0 288h46"/><path d="M375.0 270h46"/><path d="M375.0 252h46"/><path d="M375.0 234h46"/><path d="M375.0 216h46"/><path d="M375.0 198h46"/><path d="M375.0 180h46"/><path d="M375.0 162h46"/><path d="M375.0 144h46"/><path d="M375.0 126h46"/><path d="M375.0 108h46"/></g><text x="398" y="384" text-anchor="middle" class="st" data-i18n="hero.s5">Chaves</text>
+          <path id="inv-curve" class="curve" d="M78 306 C118.0 306 118.0 260 158 260 C198.0 260 198.0 210 238 210 C278.0 210 278.0 154 318 154 C358.0 154 358.0 90 398 90"/>
+          <circle class="glow" cx="398" cy="90" r="14"/>
+          <circle class="end" cx="398" cy="90" r="4.5"/>
+          <circle class="runner" r="3.5"><animateMotion dur="5s" repeatCount="indefinite" rotate="auto"><mpath href="#inv-curve"/></animateMotion></circle>
+        </svg>
+        <figcaption class="inv-foot">
+          <span><b>CRECI-SP 324251</b> · São José do Rio Preto, SP</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap">
+      <div class="figs" style="margin-bottom:clamp(56px,8vw,96px)">
+        <div class="fig"><span class="n" id="fig-dev">12</span><p data-i18n="fig.dev">empreendimentos em curadoria ativa</p></div>
+        <div class="fig"><span class="n">+4</span><p data-i18n="fig.yrs">anos entre construção civil e mercado imobiliário</p></div>
+        <div class="fig"><span class="n">1a1</span><p data-i18n="fig.one">consultoria direta, sem repasse de carteira</p></div>
+      </div>
+      <div class="about">
+        <div class="portrait"><img src="img/davi-amadeu.jpg" alt="Davi Amadeu, corretor de imóveis" width="720" height="900"></div>
+        <div class="about-body">
+          <div class="eyebrow" data-i18n="about.eyebrow">Sobre</div>
+          <h2 data-i18n-html="about.h2">Quem está do outro lado <em>da mesa</em></h2>
+          <p data-i18n="about.p1">Sou Davi Amadeu, corretor de imóveis em São José do Rio Preto, especializado em imóveis na planta e em investidores que querem construir patrimônio de forma estruturada.</p>
+          <p data-i18n="about.p2">Antes do mercado imobiliário, construí uma empresa de construção civil. Isso me deu uma leitura de dentro do produto que poucos corretores têm: entendo o empreendimento pela obra, e não só pelo folder de vendas.</p>
+          <p data-i18n="about.p3">Hoje traduzo essa experiência em decisões de investimento mais seguras para quem não tem tempo, ou não quer o risco, de analisar cada projeto sozinho. Grande parte dos meus clientes chega por indicação, no Brasil e no exterior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="metodo">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow" data-i18n="m.eyebrow">Método</div>
+        <h2 data-i18n-html="m.h2">Não vendo imóvel. <em>Estruturo decisão.</em></h2>
+        <p class="lead" data-i18n="m.lead">Quatro etapas, na mesma ordem para todo cliente, esteja ele em Rio Preto ou do outro lado do mundo.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="num">01</span><h3 data-i18n="m.1.t">Diagnóstico</h3><span class="sub" data-i18n="m.1.s">Seu objetivo primeiro</span><p data-i18n="m.1.p">Uma conversa para entender patrimônio atual, prazo e o papel do imóvel na sua estratégia.</p></div>
+        <div class="step"><span class="num">02</span><h3 data-i18n="m.2.t">Seleção</h3><span class="sub" data-i18n="m.2.s">Imóveis na planta</span><p data-i18n="m.2.p">Curadoria de empreendimentos por construtora, região, liquidez e potencial de valorização, antes de qualquer indicação.</p></div>
+        <div class="step"><span class="num">03</span><h3 data-i18n="m.3.t">Estratégia</h3><span class="sub" data-i18n="m.3.s">Investimento, não transação</span><p data-i18n="m.3.p">Cada indicação é lida em função do seu objetivo: valorização, revenda, diversificação ou proteção patrimonial.</p></div>
+        <div class="step"><span class="num">04</span><h3 data-i18n="m.4.t">Acompanhamento</h3><span class="sub" data-i18n="m.4.s">Do contrato à entrega</span><p data-i18n="m.4.p">Acompanho cada etapa da obra até a entrega das chaves e apoio as decisões patrimoniais depois dela.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow" data-i18n="p.eyebrow">Portfólio</div>
+        <h2 data-i18n-html="p.h2">Empreendimentos <em>em análise agora</em></h2>
+        <p class="lead" data-i18n="p.lead">Contexto suficiente para você decidir se quer entender os números por trás de cada um. Clique em qualquer empreendimento para falar comigo diretamente sobre ele.</p>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="more-row"><span class="count" id="count"></span><a class="btn btn-ghost" id="more-btn" href="empreendimentos.html"></a></div>
+    </div>
+  </section>
+
+  <section id="internacional">
+    <div class="wrap intl">
+      <div>
+        <div class="eyebrow" data-i18n="i.eyebrow">Atendimento internacional</div>
+        <h2 data-i18n-html="i.h2" style="margin-top:18px">Seu patrimônio no Brasil, <em>de onde você estiver.</em></h2>
+        <p class="lead" style="margin-top:20px" data-i18n="i.lead">Para brasileiros que moram fora e para clientes internacionais que querem investir no Brasil. A consultoria acontece no seu fuso horário, por videochamada, com o mesmo método do atendimento presencial.</p>
+        <div class="clocks" aria-live="off">
+          <div class="clock"><span class="k" data-i18n="i.here">Rio Preto, Brasil</span><span class="t" id="clk-br">--:--</span><span class="z">GMT-3</span></div>
+          <div class="clock"><span class="k" data-i18n="i.you">Você, agora</span><span class="t" id="clk-you">--:--</span><span class="z" id="clk-zone"></span></div>
+        </div>
+      </div>
+      <ol class="remote">
+        <li><h3 data-i18n="i.1.t">Conversa no seu horário</h3><p data-i18n="i.1.p">Agendamos uma videochamada que funcione para o seu fuso.</p></li>
+        <li><h3 data-i18n="i.2.t">Curadoria enviada a você</h3><p data-i18n="i.2.p">Você recebe a análise dos empreendimentos selecionados para o seu objetivo, com material de cada um.</p></li>
+        <li><h3 data-i18n="i.3.t">Visita por vídeo</h3><p data-i18n="i.3.p">Mostro o terreno, a obra ou o decorado ao vivo, para você ver o que eu vejo.</p></li>
+        <li><h3 data-i18n="i.4.t">Compra e acompanhamento</h3><p data-i18n="i.4.p">Oriento cada etapa da compra a distância e envio atualizações da obra até a entrega.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="ref" id="indicacoes">
+    <div class="wrap ref-in">
+      <blockquote data-i18n-html="r.quote">A maior parte dos meus clientes chega por indicação: de quem já atendi, de amigos e de parceiros, <em>no Brasil e no exterior.</em></blockquote>
+      <div class="ref-side">
+        <p data-i18n="r.p">Conhece alguém que quer investir em imóveis no Brasil? Apresente essa pessoa. Ela recebe o mesmo atendimento que você recebeu.</p>
+        <a class="btn btn-ghost" id="ref-btn" href="https://wa.me/5517997726975" target="_blank" rel="noopener" data-i18n="r.cta">Indicar alguém</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="perfil">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow" data-i18n="w.eyebrow">Para quem</div>
+        <h2 data-i18n-html="w.h2">Perfil de cliente <em>que atendo</em></h2>
+      </div>
+      <div class="profiles">
+        <div class="prof"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 24h22M6 24V12M12 24V7M18 24V14M24 24V4"/></svg><h3 data-i18n="w.1.t">Investidores</h3><p data-i18n="w.1.p">Buscam diversificação e valorização patrimonial com imóveis como ativo.</p></div>
+        <div class="prof"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="14" cy="14" r="10"/><path d="M14 8v6l4 3"/></svg><h3 data-i18n="w.2.t">Médicos e liberais</h3><p data-i18n="w.2.p">Alta renda e pouco tempo. Precisam de curadoria, não de mais opções.</p></div>
+        <div class="prof"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="9" width="20" height="15"/><path d="M10 9V5h8v4M4 15h20"/></svg><h3 data-i18n="w.3.t">Empresários</h3><p data-i18n="w.3.p">Reinvestem o resultado do negócio em patrimônio imobiliário sólido.</p></div>
+        <div class="prof"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="14" cy="14" r="10"/><path d="M4 14h20M14 4c3 3 4 6.5 4 10s-1 7-4 10c-3-3-4-6.5-4-10s1-7 4-10z"/></svg><h3 data-i18n="w.4.t">Brasileiros no exterior</h3><p data-i18n="w.4.p">Constroem patrimônio no Brasil a distância, com segurança e acompanhamento.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap contact">
+      <div>
+        <div class="eyebrow" data-i18n="c.eyebrow">Contato</div>
+        <h2 style="margin-top:18px" data-i18n-html="c.h2">Onde o imóvel entra <em>na sua estratégia?</em></h2>
+        <p class="lead" style="margin-top:20px" data-i18n="c.lead">Uma conversa de 20 minutos já mostra se o momento é de entrar, esperar ou reorganizar o que você já tem.</p>
+        <div class="direct">
+          <a href="https://wa.me/5517997726975" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg>+55 (17) 99772-6975</a>
+          <a href="https://calendar.app.google/Z4gEh5GhENEe1SGr7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-i18n="c.slots">Ver horários disponíveis</span></a>
+          <a href="https://instagram.com/corretordaviamadeu" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>@corretordaviamadeu</a>
+        </div>
+      </div>
+      <form id="lead-form" novalidate>
+        <div class="row2">
+          <label for="f-name"><span data-i18n="f.name">Nome</span><input id="f-name" name="name" autocomplete="name" required></label>
+          <label for="f-wa"><span data-i18n="f.wa">WhatsApp com DDI</span><input id="f-wa" name="wa" inputmode="tel" autocomplete="tel" placeholder="+55 17 9…" required></label>
+        </div>
+        <div class="row2">
+          <label for="f-country"><span data-i18n="f.country">País onde você mora</span>
+            <select id="f-country" name="country">
+              <option data-i18n="f.c.br">Brasil</option><option data-i18n="f.c.us">Estados Unidos</option><option>Portugal</option><option data-i18n="f.c.other">Outro país</option>
+            </select></label>
+          <label for="f-int"><span data-i18n="f.int">Principal interesse</span>
+            <select id="f-int" name="interest">
+              <option data-i18n="f.i1">Investir em imóveis na planta</option>
+              <option data-i18n="f.i2">Diversificar patrimônio</option>
+              <option data-i18n="f.i3">Comprar para morar</option>
+              <option data-i18n="f.i4">Ainda não sei, quero entender</option>
+            </select></label>
+        </div>
+        <button class="btn btn-gold" type="submit" style="justify-content:center" data-i18n="f.submit">Quero uma consultoria</button>
+        <p class="form-note" data-i18n="f.note">Retorno em até 1 dia útil.</p>
+        <p class="form-status" id="form-status" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+
+<footer>
+  <div class="wrap foot">
+    <span>Davi Amadeu · CRECI-SP 324251 · <span data-i18n="ft.k">Consultoria Imobiliária</span> · São José do Rio Preto, SP</span>
+    <nav aria-label="Rodapé"><a href="#sobre" data-i18n="nav.about">Sobre</a><a href="#portfolio" data-i18n="nav.portfolio">Portfólio</a><a href="#internacional" data-i18n="nav.intl">Internacional</a><a href="https://instagram.com/corretordaviamadeu" target="_blank" rel="noopener">Instagram</a></nav>
+  </div>
+</footer>
+
+<a class="wa-float wa" href="https://wa.me/5517997726975" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script>
+/* Dados: copiados do site atual (corretordaviamadeu.com.br) em 05/10/2026. Conferir com a Ficha Mestra de cada empreendimento antes de publicar. */
+/* Página inicial: apenas os 3 destaques. A lista completa fica em empreendimentos.html.
+   TOTAL_DEVS = quantidade total de empreendimentos no catálogo (atualizar ao incluir novos). */
+const TOTAL_DEVS=21;
+const DEVS=[
+ {b:"Tarraf",n:"Copacabana — Praias by Tarraf",img:"img/copacabana.jpg",k:"res",s:{pt:"Região do Plaza Avenida Shopping · 3 suítes · 103 m²",en:"Plaza Avenida Shopping area · 3 suites · 103 m²"},d:{pt:"Quarteirão exclusivo da Tarraf com paisagismo assinado pelo Escritório Burle Marx. Varanda gourmet e áreas de lazer com conceito de praia.",en:"An exclusive Tarraf block with landscaping by the Burle Marx office. Gourmet balconies and beach-inspired leisure areas."}},
+ {b:"Perplan",n:"Apoema Residence",img:"img/apoema.jpg",k:"res",s:{pt:"Reservas do Sul · 1 a 3 suítes · 87 a 134 m²",en:"Reservas do Sul · 1 to 3 suites · 87 to 134 m²"},d:{pt:"Torre única projetada pela Oliveira Cotta Arquitetura, com academia elevada voltada para a praça central. Minutos do Shopping Iguatemi.",en:"A single tower designed by Oliveira Cotta Arquitetura, with an elevated gym facing the central square. Minutes from Shopping Iguatemi."}},
+ {b:"Hugo Fabri",n:"Cambuí Reserva da Mata",img:"img/cambui.jpg",k:"res",s:{pt:"Reserva da Mata · 1 a 3 suítes · 64 a 112 m²",en:"Reserva da Mata · 1 to 3 suites · 64 to 112 m²"},d:{pt:"Torre única no bairro Reserva da Mata, próxima ao Plaza Shopping e ao Parque Dr. Fred Navarro.",en:"A single tower in Reserva da Mata, close to Plaza Shopping and Dr. Fred Navarro Park."}}
+];
+
+const T={
+ en:{
+  "nav.about":"About","nav.method":"Method","nav.portfolio":"Portfolio","nav.intl":"International","nav.who":"Who I serve","nav.cta":"Book a call",
+  "hero.eyebrow":"Real estate investment advisory · Brazil",
+  "hero.h1":"Every great estate begins <em>with a floor plan.</em>",
+  "hero.lead":"Analysis, selection and follow-up of off-plan property in Brazil for people who see real estate as a wealth strategy. In person in São José do Rio Preto, and remotely for clients anywhere in the world.",
+  "cta.wa":"Message on WhatsApp","cta.call":"Book a conversation",
+  "hero.aud.k":"Advisory for","hero.aud":"investors · physicians · business owners · Brazilians abroad · international clients",
+  "hero.inv.k":"Investment thesis","hero.inv.t":"From plot <em>to wealth</em>","hero.inv.desc":"Illustration: an off-plan property moves through construction stages to handover, building wealth.","hero.inv.y":"WEALTH","hero.s1":"Plan","hero.s2":"Foundation","hero.s3":"Structure","hero.s4":"Finishing","hero.s5":"Keys",
+  
+  "fig.dev":"projects under active curation","fig.yrs":"years across construction and real estate","fig.one":"one-to-one advisory, never handed off",
+  "about.eyebrow":"About","about.h2":"Who sits on the other side <em>of the table</em>",
+  "about.p1":"I'm Davi Amadeu, a licensed real estate broker in São José do Rio Preto, Brazil, focused on off-plan property and on investors who want to build wealth in a structured way.",
+  "about.p2":"Before real estate, I built a construction company. That gave me an inside reading of the product that few brokers have: I judge a project by its construction, not by its sales brochure.",
+  "about.p3":"Today I turn that experience into safer investment decisions for people who don't have the time, or don't want the risk, of analyzing every project alone. Most of my clients come through referrals, in Brazil and abroad.",
+  "m.eyebrow":"Method","m.h2":"I don't sell property. <em>I structure decisions.</em>","m.lead":"Four steps, in the same order for every client, whether they live in Rio Preto or on the other side of the world.",
+  "m.1.t":"Diagnosis","m.1.s":"Your goal comes first","m.1.p":"A conversation about your current assets, your time horizon and the role property plays in your strategy.",
+  "m.2.t":"Selection","m.2.s":"Off-plan property","m.2.p":"Projects curated by developer, location, liquidity and appreciation potential before any recommendation.",
+  "m.3.t":"Strategy","m.3.s":"Investment, not a transaction","m.3.p":"Every recommendation is read against your goal: appreciation, resale, diversification or wealth protection.",
+  "m.4.t":"Follow-up","m.4.s":"From contract to keys","m.4.p":"I follow every stage of construction until handover and support your wealth decisions after it.",
+  "cat.back":"← Back to home","cat.eyebrow":"Full portfolio","cat.h1":"All <em>projects</em>","cat.lead":"Organized by developer. Click any project to talk to me about it directly.","cat.cta.h":"Not sure where <em>to start?</em>","cat.cta.p":"In a 20-minute conversation I'll point out which of these fit your goal.",
+  "p.eyebrow":"Portfolio","p.h2":"Projects <em>under analysis now</em>","p.lead":"Enough context to decide whether you want to see the numbers behind each one. Click any project to talk to me about it directly.",
+  "i.eyebrow":"International clients","i.h2":"Your property in Brazil, <em>wherever you are.</em>","i.lead":"For Brazilians living abroad and international clients who want to invest in Brazil. Consultations happen in your time zone, by video call, with the same method as in person.",
+  "i.here":"Rio Preto, Brazil","i.you":"You, right now",
+  "i.1.t":"A call at your hour","i.1.p":"We schedule a video call that works for your time zone.",
+  "i.2.t":"Curation sent to you","i.2.p":"You receive the analysis of the projects selected for your goal, with materials for each one.",
+  "i.3.t":"Video site visit","i.3.p":"I show you the site, the construction or the model unit live, so you see what I see.",
+  "i.4.t":"Purchase and follow-up","i.4.p":"I guide each step of the purchase remotely and send construction updates until handover.",
+  "r.quote":"Most of my clients come through referrals: from people I've served, from friends and from partners, <em>in Brazil and abroad.</em>",
+  "r.p":"Know someone who wants to invest in property in Brazil? Introduce them. They'll get the same service you did.","r.cta":"Refer someone",
+  "w.eyebrow":"Who I serve","w.h2":"The clients <em>I work with</em>",
+  "w.1.t":"Investors","w.1.p":"Looking for diversification and long-term appreciation, with property as an asset.",
+  "w.2.t":"Physicians and professionals","w.2.p":"High income, little time. They need curation, not more options.",
+  "w.3.t":"Business owners","w.3.p":"Reinvesting business profits into solid real estate holdings.",
+  "w.4.t":"Brazilians abroad","w.4.p":"Building wealth in Brazil from a distance, with security and follow-up.",
+  "c.eyebrow":"Contact","c.h2":"Where does property fit <em>in your strategy?</em>","c.lead":"A 20-minute conversation is enough to see whether it's time to buy, to wait, or to reorganize what you already own.","c.slots":"See available times",
+  "f.name":"Name","f.wa":"WhatsApp with country code","f.country":"Country of residence","f.c.br":"Brazil","f.c.us":"United States","f.c.other":"Other country",
+  "f.int":"Main interest","f.i1":"Invest in off-plan property","f.i2":"Diversify my assets","f.i3":"Buy a home to live in","f.i4":"Not sure yet, I want to understand",
+  "f.submit":"Request a consultation","f.note":"Reply within 1 business day.",
+  "ft.k":"Real Estate Advisory"
+ }
+};
+const PT={};
+document.querySelectorAll("[data-i18n]").forEach(e=>PT[e.dataset.i18n]=e.textContent);
+document.querySelectorAll("[data-i18n-html]").forEach(e=>PT[e.dataset.i18nHtml]=e.innerHTML);
+T.pt=PT;
+const UI={
+ pt:{res:"Residencial",com:"Comercial",count:(n,t)=>`Mostrando ${n} de ${t} empreendimentos · São José do Rio Preto, SP`,moreAll:t=>`Ver todos os ${t} empreendimentos`,nDev:n=>`${n} empreendimento${n>1?"s":""}`,more:"Quero saber mais sobre este",msg:n=>`Olá, Davi! Vi o ${n} no seu site e quero saber mais.`,ref:"Olá, Davi! Quero te indicar uma pessoa interessada em investir em imóveis.",ok:"Pronto! Abrimos o WhatsApp com a sua mensagem. É só tocar em enviar.",err:"Preencha nome e WhatsApp para continuar."},
+ en:{res:"Residential",com:"Commercial",count:(n,t)=>`Showing ${n} of ${t} projects · São José do Rio Preto, Brazil`,moreAll:t=>`See all ${t} projects`,nDev:n=>`${n} project${n>1?"s":""}`,more:"Ask me about this project",msg:n=>`Hi Davi! I saw ${n} on your website and would like to know more.`,ref:"Hi Davi! I'd like to refer someone interested in investing in property in Brazil.",ok:"Done! WhatsApp is open with your message. Just tap send.",err:"Please fill in your name and WhatsApp to continue."}
+};
+let lang="pt", filter="all";
+document.getElementById("fig-dev").textContent=TOTAL_DEVS;
+
+function plate(d,i){
+  if(d.img) return `<img src="${d.img}" alt="${d.n}" loading="lazy" width="800" height="500">`;
+  const seed=d.n.length*7+i*13, h=40+(seed%40), w=26+(seed%18), x=150+(seed%60);
+  const floors=Math.round(h/8);
+  let lines="";for(let f=1;f<floors;f++){lines+=`<path d="M${x} ${200-f*14}h${w*2}" opacity=".35"/>`}
+  return `<svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMax slice" fill="none" stroke="#c9a64a" stroke-width="1">
+   <path d="M0 200h400" opacity=".5"/><path d="M${x} 200V${200-floors*14}h${w*2}V200" />${lines}
+   <path d="M${x-80} 200V${230-floors*10}h${w}V200" opacity=".45"/><path d="M${x+w*2+30} 200V${210-floors*9}h${w}V200" opacity=".45"/></svg>`;
+}
+const FEATURED=["Copacabana — Praias by Tarraf","Apoema Residence","Cambuí Reserva da Mata"];
+function card(d,i){
+  const a=document.createElement("article");a.className="card";
+  const href="https://wa.me/5517997726975?text="+encodeURIComponent(UI[lang].msg(d.n));
+  a.innerHTML=`<div class="plate">${plate(d,i)}</div><div class="card-b"><span class="spec">${UI[lang][d.k]} · ${d.s[lang]}</span><h3>${d.n}</h3><p>${d.d[lang]}</p><a class="more" href="${href}" target="_blank" rel="noopener">${UI[lang].more} →</a></div>`;
+  return a;
+}
+function renderGrid(){
+  const g=document.getElementById("grid");g.innerHTML="";
+  DEVS.forEach((d,i)=>{if(FEATURED.includes(d.n))g.appendChild(card(d,i))});
+  document.getElementById("count").textContent=UI[lang].count(FEATURED.length,TOTAL_DEVS);
+  document.getElementById("more-btn").textContent=UI[lang].moreAll(TOTAL_DEVS)+" →";
+}
+function setLang(l){
+  lang=l;document.documentElement.lang=l==="pt"?"pt-BR":"en";
+  document.querySelectorAll("[data-i18n]").forEach(e=>{const v=T[l][e.dataset.i18n];if(v!==undefined){if(v.includes("<br>"))e.innerHTML=v;else e.textContent=v}});
+  document.querySelectorAll("[data-i18n-html]").forEach(e=>{const v=T[l][e.dataset.i18nHtml];if(v!==undefined)e.innerHTML=v});
+  document.getElementById("lang-pt").setAttribute("aria-pressed",String(l==="pt"));
+  document.getElementById("lang-en").setAttribute("aria-pressed",String(l==="en"));
+  document.getElementById("ref-btn").href="https://wa.me/5517997726975?text="+encodeURIComponent(UI[l].ref);
+  renderGrid();tick();
+  document.getElementById("more-btn").href="empreendimentos.html"+(l==="en"?"#en":"");
+  try{localStorage.setItem("da-lang",l)}catch(e){}
+}
+document.getElementById("lang-pt").onclick=()=>setLang("pt");
+document.getElementById("lang-en").onclick=()=>setLang("en");
+const burger=document.getElementById("burger"),mnav=document.getElementById("mnav");
+burger.onclick=()=>{const o=mnav.classList.toggle("open");burger.setAttribute("aria-expanded",String(o))};
+mnav.querySelectorAll("a").forEach(a=>a.onclick=()=>{mnav.classList.remove("open");burger.setAttribute("aria-expanded","false")});
+
+function tick(){
+  const loc=lang==="pt"?"pt-BR":"en-US", o={hour:"2-digit",minute:"2-digit"};
+  document.getElementById("clk-br").textContent=new Date().toLocaleTimeString(loc,{...o,timeZone:"America/Sao_Paulo"});
+  document.getElementById("clk-you").textContent=new Date().toLocaleTimeString(loc,o);
+  let z="";try{z=Intl.DateTimeFormat().resolvedOptions().timeZone.replace(/_/g," ")}catch(e){}
+  document.getElementById("clk-zone").textContent=z;
+}
+setInterval(tick,15000);
+
+document.getElementById("lead-form").addEventListener("submit",e=>{
+  e.preventDefault();
+  const st=document.getElementById("form-status");
+  const g=id=>document.getElementById(id);
+  const name=g("f-name").value.trim(), wa=g("f-wa").value.trim();
+  if(!name||!wa){st.textContent=UI[lang].err;st.hidden=false;return}
+  const sel=id=>g(id).options[g(id).selectedIndex].text;
+  const msg=lang==="pt"
+    ?`Olá, Davi! Meu nome é ${name}. WhatsApp: ${wa}. Moro em: ${sel("f-country")}. Interesse: ${sel("f-int")}. Vim pelo seu site.`
+    :`Hi Davi! My name is ${name}. WhatsApp: ${wa}. I live in: ${sel("f-country")}. Interest: ${sel("f-int")}. I found you through your website.`;
+  window.open("https://wa.me/5517997726975?text="+encodeURIComponent(msg),"_blank","noopener");
+  st.textContent=UI[lang].ok;st.hidden=false;
+});
+
+let start="pt";
+if(location.hash==="#en")start="en";
+else{let saved=null;try{saved=localStorage.getItem("da-lang")}catch(e){}
+  start=saved||((navigator.language||"pt").toLowerCase().startsWith("pt")?"pt":"en");}
+setLang(start);
+</script>
+
+</body>
+</html>
