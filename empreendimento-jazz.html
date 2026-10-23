@@ -181,6 +181,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 .price-k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
 .price-v{font-family:var(--serif);font-size:22px;color:var(--gold-hi);font-variant-numeric:tabular-nums}
 .price-v.ask{font-size:17px;color:var(--muted)}
+.plate .loc{z-index:2;position:absolute;right:14px;bottom:14px;font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#17130e;background:var(--gold);padding:6px 10px}
 .card-b .more{margin-top:0}
 /* international */
 .intl{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start}
@@ -289,6 +290,14 @@ footer{border-top:1px solid var(--gold-faint);padding-block:40px;color:var(--dim
 .lb-prev{left:10px}.lb-next{right:10px}
 .lb-c{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:12px;color:var(--muted)}
 @media (max-width:600px){.lb{padding:56px 8px}.lb-n{width:38px;height:52px}}
+.map{position:relative;aspect-ratio:16/7;min-height:320px;border:1px solid var(--gold-line);overflow:hidden;background:var(--surface)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map-addr{margin:0 0 14px;color:var(--fg);font-size:15px}
+.map-link{display:inline-block;margin-top:14px;color:var(--gold-hi);font-size:14px;text-decoration:none;border-bottom:1px solid var(--gold-line)}
+.map-link:hover{border-color:var(--gold)}
+@media (max-width:600px){.map{aspect-ratio:4/5}}
+.p-region{margin:0;border:1px solid var(--gold);border-left-width:4px;background:rgba(201,166,74,.08);padding:14px 16px;font-size:14.5px;line-height:1.55;color:var(--fg)}
+.p-region strong{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:4px;font-weight:500}
 .h3t{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin:0 0 14px}
 </style>
 </head>
@@ -322,6 +331,7 @@ footer{border-top:1px solid var(--gold-faint);padding-block:40px;color:var(--dim
           <span class="spec" data-pt="Residencial · Zona Sul · 2 e 3 dorms com suíte · 67 a 80 m²" data-en="Residential · South Zone · 2 and 3 bedrooms with suite · 67 to 80 m²">Residencial · Zona Sul · 2 e 3 dorms com suíte · 67 a 80 m²</span>
           <p class="lead" data-pt="Plantas com até 2 vagas e depósito privativo, club house com piscina, coworking e gerador para o condomínio. Entrega contratual prevista para março de 2027." data-en="Units with up to 2 parking spaces and private storage, a clubhouse with pool, coworking and a building generator. Contractual delivery scheduled for March 2027.">Plantas com até 2 vagas e depósito privativo, club house com piscina, coworking e gerador para o condomínio. Entrega contratual prevista para março de 2027.</p>
           <div class="p-price"><span class="k" data-pt="A partir de" data-en="Starting at">A partir de</span><span class="v">R$ 531.000,00</span></div>
+          
           <div class="ctas" style="margin-top:4px">
             <a class="btn btn-gold" id="wa" href="https://wa.me/5517997726975?text=Olá, Davi! Vi o Jazz no seu site e quero saber mais." target="_blank" rel="noopener" data-pt="Quero saber mais pelo WhatsApp" data-en="Ask me on WhatsApp">Quero saber mais pelo WhatsApp</a>
           </div>
@@ -329,7 +339,7 @@ footer{border-top:1px solid var(--gold-faint);padding-block:40px;color:var(--dim
       </div>
     </div>
   </section>
-
+<section class="p-sec"><div class="wrap"><p class="h3t" data-pt="Localização" data-en="Location">Localização</p><p class="map-addr">Zona Sul, São José do Rio Preto - SP</p><div class="map"><iframe src="https://maps.google.com/maps?q=-20.8382657,-49.3664056&amp;t=h&amp;z=17&amp;hl=pt-BR&amp;output=embed" title="Mapa — Jazz" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=-20.8382657,-49.3664056" target="_blank" rel="noopener" data-pt="Abrir no Google Maps →" data-en="Open in Google Maps →">Abrir no Google Maps →</a></div></section>
   <section>
     <div class="wrap p-cols">
       <div>
