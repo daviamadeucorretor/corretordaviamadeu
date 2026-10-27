@@ -251,6 +251,7 @@ footer{border-top:1px solid var(--gold-faint);padding-block:40px;color:var(--dim
       <a href="index.html#sobre" data-i18n="nav.about">Sobre</a>
       <a href="index.html#metodo" data-i18n="nav.method">Método</a>
       <a href="index.html#portfolio" data-i18n="nav.portfolio">Portfólio</a>
+      <a href="revenda-selecionada.html" data-i18n="nav.ready">Revenda Selecionada</a>
       <a href="index.html#internacional" data-i18n="nav.intl">Internacional</a>
       <a href="index.html#perfil" data-i18n="nav.who">Para quem</a>
     </nav>
@@ -265,6 +266,7 @@ footer{border-top:1px solid var(--gold-faint);padding-block:40px;color:var(--dim
     <a href="index.html#sobre" data-i18n="nav.about">Sobre</a>
     <a href="index.html#metodo" data-i18n="nav.method">Método</a>
     <a href="index.html#portfolio" data-i18n="nav.portfolio">Portfólio</a>
+    <a href="revenda-selecionada.html" data-i18n="nav.ready">Revenda Selecionada</a>
     <a href="index.html#internacional" data-i18n="nav.intl">Internacional</a>
     <a href="index.html#perfil" data-i18n="nav.who">Para quem</a>
     <a href="index.html#contato" data-i18n="nav.cta">Fale comigo</a>
@@ -353,7 +355,7 @@ const T={
   "nav.method":"Method",
   "nav.portfolio":"Portfolio",
   "nav.intl":"International",
-  "nav.who":"Who I serve",
+  "nav.who":"Who I serve","nav.ready":"Selected Resale","pr.eyebrow":"Selected resale","pr.h2":"Owner-listed homes, <em>hand-picked</em>","pr.lead":"Ready-to-move-in homes sold by their owners — not developer launches. Chosen with the same criteria I use for new developments.","pr.more":"See selected resale →","pr.sell":"Have a property to sell? I evaluate it and handle the sale →",
   "nav.cta":"Contact me",
   "cat.back":"← Back to home",
   "cat.eyebrow":"Full portfolio",
@@ -371,8 +373,8 @@ document.querySelectorAll("[data-i18n]").forEach(e=>PT[e.dataset.i18n]=e.textCon
 document.querySelectorAll("[data-i18n-html]").forEach(e=>PT[e.dataset.i18nHtml]=e.innerHTML);
 T.pt=PT;
 const UI={
- pt:{res:"Residencial",from:"A partir de",ask:"Consulte valores",det:"Ver detalhes",com:"Comercial",count:(n,t)=>`Mostrando ${n} de ${t} empreendimentos · Rio Preto e região (SP) e litoral de SC`,moreAll:t=>`Ver todos os ${t} empreendimentos`,nDev:n=>`${n} empreendimento${n>1?"s":""}`,more:"Quero saber mais sobre este",msg:n=>`Olá, Davi! Vi o ${n} no seu site e quero saber mais.`,ref:"Olá, Davi! Quero te indicar uma pessoa interessada em investir em imóveis.",ok:"",err:"Preencha nome e WhatsApp para continuar."},
- en:{res:"Residential",from:"Starting at",ask:"Price on request",det:"See details",com:"Commercial",count:(n,t)=>`Showing ${n} of ${t} projects · Rio Preto area (SP) and the Santa Catarina coast`,moreAll:t=>`See all ${t} projects`,nDev:n=>`${n} project${n>1?"s":""}`,more:"Ask me about this project",msg:n=>`Hi Davi! I saw ${n} on your website and would like to know more.`,ref:"Hi Davi! I'd like to refer someone interested in investing in property in Brazil.",ok:"",err:"Please fill in your name and WhatsApp to continue."}
+ pt:{res:"Residencial",from:"A partir de",ask:"Consulte valores",det:"Ver detalhes",was:"De",now:"Por",casa:"Casa em condomínio",com:"Comercial",count:(n,t)=>`Mostrando ${n} de ${t} empreendimentos · Rio Preto e região (SP) e litoral de SC`,moreAll:t=>`Ver todos os ${t} empreendimentos`,nDev:n=>`${n} empreendimento${n>1?"s":""}`,more:"Quero saber mais sobre este",msg:n=>`Olá, Davi! Vi o ${n} no seu site e quero saber mais.`,ref:"Olá, Davi! Quero te indicar uma pessoa interessada em investir em imóveis.",ok:"",err:"Preencha nome e WhatsApp para continuar."},
+ en:{res:"Residential",from:"Starting at",ask:"Price on request",det:"See details",was:"Was",now:"Now",casa:"Gated-community house",com:"Commercial",count:(n,t)=>`Showing ${n} of ${t} projects · Rio Preto area (SP) and the Santa Catarina coast`,moreAll:t=>`See all ${t} projects`,nDev:n=>`${n} project${n>1?"s":""}`,more:"Ask me about this project",msg:n=>`Hi Davi! I saw ${n} on your website and would like to know more.`,ref:"Hi Davi! I'd like to refer someone interested in investing in property in Brazil.",ok:"",err:"Please fill in your name and WhatsApp to continue."}
 };
 let lang="pt";
 
@@ -386,8 +388,8 @@ function plate(d,i){
    <path d="M${x-80} 200V${230-floors*10}h${w}V200" opacity=".45"/><path d="M${x+w*2+30} 200V${210-floors*9}h${w}V200" opacity=".45"/></svg>`;
 }
 function card(d,i){
-  const a=document.createElement("a");a.className="card";a.href="empreendimento-"+d.slug+".html";
-  const price=d.p?`<span class="price-k">${UI[lang].from}</span><span class="price-v">${d.p}</span>`:`<span class="price-v ask">${UI[lang].ask}</span>`;
+  const a=document.createElement("a");a.className="card";a.href=d.file||("empreendimento-"+d.slug+".html");
+  const price=d.po?`<span class="price-k">${UI[lang].was} <s>${d.po}</s></span><span class="price-v">${UI[lang].now} ${d.p}</span>`:d.p?`<span class="price-k">${UI[lang].from}</span><span class="price-v">${d.p}</span>`:`<span class="price-v ask">${UI[lang].ask}</span>`;
   a.innerHTML=`<div class="plate">${plate(d,i)}${d.u?`<span class="tag">${d.u[lang]}</span>`:""}${d.r?`<span class="loc">${d.r[lang]}</span>`:""}</div><div class="card-b"><span class="spec">${UI[lang][d.k]} · ${d.s[lang]}</span><h3>${d.n}</h3><p>${d.d[lang]}</p><div class="price">${price}</div><span class="more">${UI[lang].det} →</span></div>`;
   return a;
 }
